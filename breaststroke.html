@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a1628">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>Breaststroke – Swim Coach</title>
+<link rel="stylesheet" href="./shared.css">
+<style>
+:root{
+  --stroke-primary:#7c3aed;--stroke-light:#c4b5fd;--stroke-pale:#f5f3ff;--stroke-dim:#ddd6fe;
+  --stroke-grad1:#1e0a3c;--stroke-grad2:#3d1a6e;--stroke-grad3:#7c3aed;
+}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="topbar">
+  <a href="index.html" class="tb-back">‹ Strokes</a>
+  <div class="tb-title">🐸 <span>Breaststroke</span></div>
+  <button class="tb-more" onclick="toggleMenu()">⋯</button>
+</div>
+<div id="offline-badge">● Offline</div>
+<div id="overflow-menu" onclick="closeMenu()">
+  <div class="overflow-panel" onclick="event.stopPropagation()">
+    <button class="ov-item" onclick="goPage('p-home');closeMenu()"><span class="oi">🏠</span>Home</button>
+    <button class="ov-item" onclick="goPage('p-tech');closeMenu()"><span class="oi">🎯</span>Technique</button>
+    <button class="ov-item" onclick="goPage('p-drills');closeMenu()"><span class="oi">⚡</span>Drills</button>
+    <button class="ov-item" onclick="goPage('p-workouts');closeMenu()"><span class="oi">📋</span>Workouts</button>
+    <button class="ov-item" onclick="goPage('p-race');closeMenu()"><span class="oi">🏁</span>Race Strategy</button>
+    <button class="ov-item" onclick="goPage('p-mistakes');closeMenu()"><span class="oi">⚠️</span>Mistakes</button>
+    <button class="ov-item" onclick="goPage('p-tracker');closeMenu()"><span class="oi">📊</span>Tracker</button>
+    <a class="ov-item" href="index.html"><span class="oi">🔄</span>All Strokes</a>
+  </div>
+</div>
+<div id="scroll-area">
+
+<!-- HOME -->
+<div id="p-home" class="page active">
+  <div class="hero">
+    <div class="hero-eye">6-Week Training Manual</div>
+    <h1>Breaststroke<br><em>Timing &amp; Power</em></h1>
+    <div class="hero-sub">Technique-First · 3 Days/Week · All Events</div>
+    <div class="hero-stats">
+      <div class="hs"><span class="n">6</span><span class="l">Weeks</span></div>
+      <div class="hs"><span class="n">18</span><span class="l">Workouts</span></div>
+      <div class="hs"><span class="n">10</span><span class="l">Drills</span></div>
+      <div class="hs"><span class="n">3</span><span class="l">Events</span></div>
+    </div>
+  </div>
+  <div class="sec-head"><span class="sec-icon">⚡</span><h2>Navigate</h2></div>
+  <div class="hgrid">
+    <div class="hcard" onclick="goPage('p-tech')"><span class="hi">🎯</span><div class="ht">Technique</div><div class="hs2">Core mechanics</div></div>
+    <div class="hcard" onclick="goPage('p-drills')"><span class="hi">⚡</span><div class="ht">Drills</div><div class="hs2">10 top drills</div></div>
+    <div class="hcard" onclick="goPage('p-workouts')"><span class="hi">📋</span><div class="ht">Workouts</div><div class="hs2">All 18 daily sessions</div></div>
+    <div class="hcard" onclick="goPage('p-race')"><span class="hi">🏁</span><div class="ht">Race Strategy</div><div class="hs2">50·100·200</div></div>
+    <div class="hcard" onclick="goPage('p-mistakes')"><span class="hi">⚠️</span><div class="ht">Mistakes</div><div class="hs2">Top 10 fixes</div></div>
+    <div class="hcard" onclick="goPage('p-tracker')"><span class="hi">📊</span><div class="ht">Tracker</div><div class="hs2">Log your progress</div></div>
+  </div>
+  <div class="ebox">
+    <h4>What Elite Breaststrokers Do Differently</h4>
+    <ul>
+      <li>The pullout off every wall is the fastest moment in the race — they maximize it</li>
+      <li>Knees stay inside hip-width — narrow kick = less drag</li>
+      <li>Head stays in line during the pull — no bobbing</li>
+      <li>The glide is a weapon, not a rest — they use it to accelerate</li>
+      <li>Hands never separate wider than the shoulders during pull</li>
+      <li>Hip drive powers the kick — not just the legs</li>
+      <li>Timing is everything: pull–breathe–kick–glide in a perfect rhythm</li>
+    </ul>
+  </div>
+  <div class="qblock">
+    <div class="qt">The Breaststroke Equation</div>
+    <div class="qb">"Breaststroke is 50% timing, 30% technique, 20% fitness.<br>Fix the timing first. Everything else follows."</div>
+  </div>
+</div>
+
+<!-- TECHNIQUE -->
+<div id="p-tech" class="page">
+  <div class="sec-head"><span class="sec-icon">🎯</span><h2>Core Mechanics</h2></div>
+  <div class="subsec">1 · The Pullout (Underwater)</div>
+  <div class="cga"><div class="chip cgo">Free Speed — Most Important</div>
+    <h3 class="ct">Breaststroke Pullout</h3>
+    <p class="cp2">The pullout off every start and turn is the fastest part of the race. It consists of a streamline, one underwater pull to the thighs, one dolphin kick, and then a breakout. Mastering it alone can drop 2–3 seconds.</p>
+    <ul class="cu">
+      <li><strong>Streamline:</strong> Tight squeeze, full extension, head neutral</li>
+      <li><strong>Underwater pull:</strong> One long pull all the way to thighs — do NOT start the pull too early</li>
+      <li><strong>Dolphin kick:</strong> One kick as arms recover to streamline</li>
+      <li><strong>Breakout:</strong> First breaststroke pull begins just as you hit swimming speed</li>
+    </ul>
+    <div class="feel"><b>Feel</b>Gliding forward with momentum, then the pull accelerates you further. The dolphin kick should feel like a boost, not a recovery.</div>
+  </div>
+  <div class="subsec">2 · The Pull</div>
+  <div class="ca"><div class="chip cp">Outsweep → Insweep → Recovery</div>
+    <h3 class="ct">Breaststroke Pull Pattern</h3>
+    <p class="cp2">The breaststroke pull is a heart-shaped pattern. The outsweep sets the catch, the insweep generates propulsion, and the recovery shoots hands forward.</p>
+    <ul class="cu">
+      <li><strong>Outsweep:</strong> Hands press outward to shoulder-width, elbows stay high</li>
+      <li><strong>Catch:</strong> Elbows bend as hands face backward — high elbow catch</li>
+      <li><strong>Insweep:</strong> Hands sweep inward and back under the chest powerfully</li>
+      <li><strong>Recovery:</strong> Shoot hands forward — fast and tight to the body surface</li>
+      <li>Hands never pull wider than shoulder-width — wider = drag, not propulsion</li>
+    </ul>
+    <div class="feel"><b>Feel</b>Water pressure building on the palms during the insweep. If you feel pressure during the outsweep, you're pulling too early.</div>
+  </div>
+  <div class="subsec">3 · The Kick</div>
+  <div class="ca"><div class="chip cp">Most Unique in Swimming</div>
+    <h3 class="ct">Whip Kick Mechanics</h3>
+    <p class="cp2">The breaststroke kick is the primary propulsive force — more so than in any other stroke. It must be symmetrical, narrow, and powerful.</p>
+    <ul class="cu">
+      <li><strong>Recovery:</strong> Heels draw toward glutes — knees stay inside hip-width</li>
+      <li><strong>Catch:</strong> Feet flex and rotate outward (dorsiflex + evert)</li>
+      <li><strong>Drive:</strong> Heels push outward and backward in a circular arc</li>
+      <li><strong>Finish:</strong> Feet snap together — squeeze the finish for extra propulsion</li>
+      <li>Knees must stay inside the hip line — wide knees = massive drag</li>
+    </ul>
+    <div class="feel"><b>Feel</b>The "catch" phase — the moment your feet rotate outward and you feel water on the soles. Then drive and snap.</div>
+  </div>
+  <div class="subsec">4 · Timing — The Master Key</div>
+  <div class="cga"><div class="chip cgo">Most Important Concept</div>
+    <h3 class="ct">Pull–Breathe–Kick–Glide</h3>
+    <p class="cp2">Breaststroke timing is what separates good from elite. The phases must flow in exact sequence — there should never be a pause or overlap between pull and kick.</p>
+    <ul class="cu">
+      <li><strong>Pull:</strong> Outsweep → insweep → hands meet under chest</li>
+      <li><strong>Breathe:</strong> Head rises naturally with the pull — NOT an active lift</li>
+      <li><strong>Kick:</strong> Begins as hands shoot forward — the kick and recovery overlap</li>
+      <li><strong>Glide:</strong> Body fully streamlined, momentum carries you forward</li>
+    </ul>
+    <div class="feel"><b>Feel</b>One fluid motion — like a wave passing through your body from head to toe. No dead spots, no stops.</div>
+    <div class="err"><b>Common Timing Flaw</b>Breathing too late (after the pull instead of during it) or kicking before hands shoot forward. Both kill momentum.</div>
+  </div>
+  <div class="subsec">5 · Body Position in Glide</div>
+  <div class="ca"><div class="chip cp">Maximize Momentum</div>
+    <p class="cp2">During the glide, your body should be in a perfect streamline — arms extended, head neutral between arms, feet together and pointed. Any drag in the glide wastes the momentum you just created.</p>
+    <ul class="cu">
+      <li>Head drops between arms immediately after the breath</li>
+      <li>Hips should be at surface level during the glide</li>
+      <li>Glide length varies — sprint breaststroke glides less, distance glides more</li>
+    </ul>
+  </div>
+  <div class="cgrid">
+    <div class="ccard"><span class="ccicon">🌊</span><div class="cctxt">"Pull–breathe–kick–glide"</div><div class="ccsub">Timing mantra</div></div>
+    <div class="ccard"><span class="ccicon">🦵</span><div class="cctxt">"Knees in, heels out"</div><div class="ccsub">Kick cue</div></div>
+    <div class="ccard"><span class="ccicon">💨</span><div class="cctxt">"Shoot the hands"</div><div class="ccsub">Recovery cue</div></div>
+    <div class="ccard"><span class="ccicon">🎯</span><div class="cctxt">"Catch before you pull"</div><div class="ccsub">Pull cue</div></div>
+  </div>
+</div>
+
+<!-- DRILLS -->
+<div id="p-drills" class="page">
+  <div class="sec-head"><span class="sec-icon">⚡</span><h2>Top 10 Drills</h2></div>
+  <div class="ca" style="margin-bottom:14px"><p class="cp2" style="font-size:13px"><strong>Key:</strong> Breaststroke drills must be done slowly at first. The timing pattern is learned by feel — rushing it trains the wrong pattern.</p></div>
+  <div class="card"><div class="cb"><div class="dnum">01</div><div class="dtit">Pullout Practice</div><p class="cp2">From each wall, practice only the pullout: streamline → underwater pull to thighs → one dolphin kick → breakout. Full rest between each. This is the most valuable drill in the set.</p><div class="feel"><b>Feel</b>Speed accelerating through the pull, then the dolphin kick maintaining it. Breakout at maximum forward momentum.</div><div class="err"><b>Mistake</b>Starting the pull too early — wait until you're at full streamline speed before pulling.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">02</div><div class="dtit">2-Kick 1-Pull Drill</div><p class="cp2">Two breaststroke kicks for every one pull. Forces the kick to be the dominant propulsive force and teaches proper kick-pull separation.</p><div class="feel"><b>Feel</b>Each kick driving you forward with the body in streamline. The pull becomes secondary.</div><div class="err"><b>Mistake</b>Rushing the second kick — each kick should be deliberate and powerful.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">03</div><div class="dtit">Kick on Back</div><p class="cp2">Breaststroke kick on your back, arms at sides. You can watch your knees and feet to check width and ankle position. Essential for self-correction.</p><div class="feel"><b>Feel</b>Heels drawing to glutes, feet rotating outward to catch, then snapping together at finish.</div><div class="err"><b>Mistake</b>Knees spreading wider than hips — visible from above and dramatically slows you down.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">04</div><div class="dtit">Breaststroke Kick with Board</div><p class="cp2">Kickboard held in front, arms extended. Isolates the kick completely. Breathe by lifting eyes forward, not lifting the whole head.</p><div class="feel"><b>Feel</b>Forward momentum through the kick finish — feet snapping together should surge you forward.</div><div class="err"><b>Mistake</b>Slow, wide, lazy kick. Each kick should feel like an explosion, not a paddle.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">05</div><div class="dtit">Arms-Only Pull (Pull Buoy)</div><p class="cp2">Pull buoy between legs, swim breaststroke arms only. Isolates the pull pattern and timing. Focus on the outsweep→insweep→shoot sequence.</p><div class="feel"><b>Feel</b>Pressure building only during the insweep. The hand shoot forward should be forceful and tight to the body.</div><div class="err"><b>Mistake</b>Pulling hands too wide — they should never exceed shoulder-width during the pull.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">06</div><div class="dtit">3-Glide Drill</div><p class="cp2">Take one full breaststroke pull and kick, then hold the streamline glide position for a count of 3 before the next stroke. Exaggerates the glide and builds streamline body position.</p><div class="feel"><b>Feel</b>Full extension, head neutral, feet together and pointed during the 3-count. Maximum streamline.</div><div class="err"><b>Mistake</b>Starting the pull too soon — force yourself to hold the count even as you slow down.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">07</div><div class="dtit">Timing Drill — Hands Lead Kick</div><p class="cp2">Exaggerate the timing: shoot hands forward fully before the kick begins. This corrects the most common timing error (kick starting too early).</p><div class="feel"><b>Feel</b>A brief overlap where your hands are fully extended before your feet start the drive.</div><div class="err"><b>Mistake</b>Reverting to simultaneous hands-and-kick — slow down and be deliberate about the sequence.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">08</div><div class="dtit">Breaststroke Fist Drill</div><p class="cp2">Swim breaststroke with clenched fists. Forces the forearm to load up during the insweep and teaches the high-elbow catch position.</p><div class="feel"><b>Feel</b>Forearm pressure during the insweep rather than just palm pressure.</div><div class="err"><b>Mistake</b>Widening the pull to compensate for fists — keep the same shoulder-width pattern.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">09</div><div class="dtit">Head-Lead Kick Drill</div><p class="cp2">Float face down, arms at sides, kick only. Head stays in the water throughout (breathe by turning to the side). Forces you to feel the kick propulsion without arm help.</p><div class="feel"><b>Feel</b>Each kick cycle moving you forward — if you're sinking, the kick is too slow or too wide.</div><div class="err"><b>Mistake</b>Lifting the head to breathe — turn to the side to maintain body position.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">10</div><div class="dtit">Underwater Breaststroke Pull</div><p class="cp2">Swim one full length of underwater breaststroke — one pullout plus as many underwater pull-kick cycles as possible before surfacing. Builds lung capacity and strengthens the underwater pull pattern.</p><div class="feel"><b>Feel</b>Streamlining fully between each underwater pull-kick cycle. Maximum efficiency underwater.</div><div class="err"><b>Mistake</b>Surfacing too early — challenge yourself to stay under as long as possible (safely).</div></div></div>
+</div>
+
+<!-- WORKOUTS -->
+<div id="p-workouts" class="page">
+  <div class="sec-head"><span class="sec-icon">📋</span><h2>18 Daily Workouts</h2></div>
+  <div class="ca" style="margin-bottom:4px"><p class="cp2" style="font-size:13px"><strong>3 days/week for 6 weeks.</strong> Tap any day to expand. All warm-ups and cool-downs in freestyle unless noted.</p></div>
+
+  <div class="week-label">Week 1 <span class="week-pill">Technique Foundation</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">1</div><div class="day-meta"><div class="day-title">Pullout + Kick Intro</div><div class="day-sub">Mon · ~2,000m · Easy/Drill</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">300 free easy + 100 breast easy — feel your current timing</div></div>
+      <div class="set-line"><div class="set-name">Pullout Focus</div><div class="set-detail">10× pullout only from each wall — full rest between each<br>Streamline → pull to thighs → one dolphin kick → breakout<br>Aim to reach 8m+ before first breaststroke pull</div><div class="set-note">This single drill can drop 1–2 seconds alone. Do it every practice.</div></div>
+      <div class="set-line"><div class="set-name">Kick Set</div><div class="set-detail">6×25 breast kick on board on :50 — focus on knees inside hips, heels to glutes</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×50 breast on 1:30 — focus on kick mechanics only, count strokes per 25</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,000m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">2</div><div class="day-meta"><div class="day-title">Pull Pattern + Timing Intro</div><div class="day-sub">Wed · ~2,200m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free easy</div></div>
+      <div class="set-line"><div class="set-name">Pull Drill Block</div><div class="set-detail">8×25 breast on :55<br>1,2: Arms-only with pull buoy — outsweep→insweep→shoot<br>3,4: 2-kick 1-pull drill<br>5,6: Timing drill — hands lead kick<br>7,8: Full stroke, apply the timing</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">8×50 breast on 1:25 — focus on "pull–breathe–kick–glide" mantra every stroke</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,200m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">3</div><div class="day-meta"><div class="day-title">Glide + Full Integration</div><div class="day-sub">Fri · ~2,300m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 100 breast kick on back (self-check knees)</div></div>
+      <div class="set-line"><div class="set-name">Glide Drill Set</div><div class="set-detail">6×25 breast on 1:00 — 3-glide drill: hold streamline for 3-count after each stroke<br>Feel the momentum carrying you before the next pull</div></div>
+      <div class="set-line"><div class="set-name">Pullout Set</div><div class="set-detail">8× pullout-only practice — each one must be longer than the last rep</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×100 breast on 2:20 — count strokes every 25, hold consistent count</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,300m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 2 <span class="week-pill">Technique Foundation</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">4</div><div class="day-meta"><div class="day-title">Kick Mechanics Deep Dive</div><div class="day-sub">Mon · ~2,400m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 100 breast easy</div></div>
+      <div class="set-line"><div class="set-name">Kick Diagnosis Set</div><div class="set-detail">6×25 breast kick on back on :50 — watch your own knees<br>Knees must stay inside the hip line on every rep<br>Video yourself from above if possible</div><div class="set-note">Wide-knee breaststroke is one of the top 3 errors. Self-correct here.</div></div>
+      <div class="set-line"><div class="set-name">Head-Lead Kick</div><div class="set-detail">4×25 head-lead kick drill — arms at sides, feel propulsion from the kick alone</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">8×50 breast on 1:20 — every stroke: narrow knees, foot catch, snap finish</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy</div></div>
+      <span class="day-total">~2,400m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">5</div><div class="day-meta"><div class="day-title">Breathing Position + Head</div><div class="day-sub">Wed · ~2,400m · Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 IM order easy</div></div>
+      <div class="set-line"><div class="set-name">Breath Position Drill</div><div class="set-detail">8×25 breast on :55 — focus only on the breath: head rises naturally with pull (not a separate lift), eyes forward, mouth just clears the water, head drops immediately with kick</div><div class="set-note">Exaggerated head lifting is a top 3 breaststroke error. The head follows the pull — it doesn't lead it.</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×75 breast on 1:45<br>25 kick only / 25 arms only / 25 full stroke<br>Connect the two isolated movements into one full stroke</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,400m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">6</div><div class="day-meta"><div class="day-title">Full Stroke Integration</div><div class="day-sub">Fri · ~2,500m · Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 200 breast easy</div></div>
+      <div class="set-line"><div class="set-name">Technique Pyramid</div><div class="set-detail">4×100 breast on 2:10<br>Each 100 = 25 kick only / 25 pull only / 25 full timing drill / 25 race-effort stroke<br>Each phase should feel connected to the next</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">8×50 breast on 1:20 — strong, even stroke count, perfect pullout every wall</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy</div></div>
+      <span class="day-total">~2,500m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 3 <span class="week-pill">Power &amp; Efficiency</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">7</div><div class="day-meta"><div class="day-title">Resistance + Pull Power</div><div class="day-sub">Mon · ~2,600m · Moderate/Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 breast drill of choice</div></div>
+      <div class="set-line"><div class="set-name">Fist Drill Power Set</div><div class="set-detail">6×50 breast on 1:20 — fist drill<br>Then immediately 6×50 breast on 1:15 — open hands<br>Feel the amplified catch pressure with open hands after fists</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×150 breast on 3:00 — strong, consistent stroke count throughout each 150</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,600m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">8</div><div class="day-meta"><div class="day-title">Tempo + Stroke Rate</div><div class="day-sub">Wed · ~2,700m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 breast kick</div></div>
+      <div class="set-line"><div class="set-name">Tempo Contrast Set</div><div class="set-detail">6×50 breast alternating on 1:30<br>Odd: long glide, slow tempo — max DPS<br>Even: shorter glide, faster tempo — sprint feel<br>Learn the difference between distance and sprint breaststroke tempo</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×200 breast on 4:00 — strong aerobic effort, count strokes, even splits</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,700m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">9</div><div class="day-meta"><div class="day-title">Race Pace Introduction</div><div class="day-sub">Fri · ~2,800m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 breast build</div></div>
+      <div class="set-line"><div class="set-name">Pullout Sprint Set</div><div class="set-detail">8× pullout → 25 race-pace breast — full rest each<br>The race pace 25 follows every pullout — connects the two</div></div>
+      <div class="set-line"><div class="set-name">Race Pace 50s</div><div class="set-detail">8×50 breast on 1:45 — descend 1–4, repeat 5–8<br>Hold DPS target even at race pace tempo</div></div>
+      <div class="set-line"><div class="set-name">Race Sim</div><div class="set-detail">1×100 breast at goal pace — full rest 5 min · record splits</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 4 <span class="week-pill">Power &amp; Efficiency</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">10</div><div class="day-meta"><div class="day-title">Kick Power + Speed</div><div class="day-sub">Mon · ~2,800m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 4×25 breast drill</div></div>
+      <div class="set-line"><div class="set-name">Kick Power Set</div><div class="set-detail">10×25 breast kick on board on :40 — alternate easy and sprint kick<br>Odd: slow, perfect technique kick<br>Even: max-effort kick — same narrow technique at speed</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">5×100 breast on 2:00 — strong, every pullout at max effort, count strokes</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">11</div><div class="day-meta"><div class="day-title">Broken 200 Pacing</div><div class="day-sub">Wed · ~2,900m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 breast kick</div></div>
+      <div class="set-line"><div class="set-name">Broken 200 Breast</div><div class="set-detail">4×50 breast on 3:00 — each 50 is one quarter of a 200 at goal pace<br>Add splits for projected 200 time<br>Count strokes — must match across all 4 reps</div></div>
+      <div class="set-line"><div class="set-name">Threshold Set</div><div class="set-detail">3×200 breast on 4:00 — strong aerobic effort, consistent tempo throughout</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,900m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">12</div><div class="day-meta"><div class="day-title">Back Half Strength</div><div class="day-sub">Fri · ~3,000m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 breast build</div></div>
+      <div class="set-line"><div class="set-name">Back Half Set</div><div class="set-detail">6×50 breast on 2:00<br>25 easy / 25 RACE PACE<br>Race pace 25 must hold full technique — don't let kick go wide under fatigue</div></div>
+      <div class="set-line"><div class="set-name">Race Sim</div><div class="set-detail">3×100 breast at goal race pace — 5 min rest each · record all splits</div></div>
+      <div class="set-line"><div class="set-name">Pullouts</div><div class="set-detail">6× max-distance pullout practice</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy</div></div>
+      <span class="day-total">~3,000m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 5 <span class="week-pill">Race Readiness</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">13</div><div class="day-meta"><div class="day-title">Sprint Mechanics + Turns</div><div class="day-sub">Mon · ~2,800m · Strong/Race</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 breast kick + 4×25 breast build</div></div>
+      <div class="set-line"><div class="set-name">Turn + Pullout Set</div><div class="set-detail">10× approach from 10m out → touch → pullout → first 3 strokes of race<br>Full rest each — perfect execution every rep<br>Focus: tight two-hand touch, fast rotation to push-off, max pullout</div><div class="set-note">Two-hand touch is mandatory in breaststroke — practice it in every turn.</div></div>
+      <div class="set-line"><div class="set-name">Sprint 50s</div><div class="set-detail">6×50 breast on 2:00 — RACE PACE, perfect pullout every wall</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">14</div><div class="day-meta"><div class="day-title">50 & 100 Race Sets</div><div class="day-sub">Wed · ~2,800m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">600 free descend + 4×25 breast race-pace efforts</div></div>
+      <div class="set-line"><div class="set-name">50 Breast Race Set</div><div class="set-detail">4×50 breast on 3:00 — full race effort · record time and stroke count</div></div>
+      <div class="set-line"><div class="set-name">100 Breast Race Set</div><div class="set-detail">3×100 breast on 6:00 — race effort · record all 25 splits · count strokes on back half</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">500 free easy</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">15</div><div class="day-meta"><div class="day-title">200 Race Simulation</div><div class="day-sub">Fri · ~3,000m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">600 free + 200 breast kick + 4×25 pace builders</div></div>
+      <div class="set-line"><div class="set-name">200 Breast Simulation</div><div class="set-detail">2×200 breast on 8:30 — full race effort<br>Rep 1: even splits — stroke count same on every 50<br>Rep 2: negative split — back 100 faster<br>Record all splits</div></div>
+      <div class="set-line"><div class="set-name">Aerobic Set</div><div class="set-detail">6×50 breast on 1:20 — 200 race pace, perfect timing pattern</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~3,000m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 6 <span class="week-pill">Taper &amp; Time Trials</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">16</div><div class="day-meta"><div class="day-title">Sharpening — Quality Only</div><div class="day-sub">Mon · ~2,200m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 200 breast easy drill</div></div>
+      <div class="set-line"><div class="set-name">Speed Work</div><div class="set-detail">8×25 breast on 2:00 — MAXIMUM effort, full rest<br>Perfect pullout, perfect timing, narrow kick — race conditions</div></div>
+      <div class="set-line"><div class="set-name">Race Pace 50s</div><div class="set-detail">4×50 breast on 3:00 — race pace · record each</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,200m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">17</div><div class="day-meta"><div class="day-title">Final Tune-Up</div><div class="day-sub">Wed · ~1,800m · Light/Race</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free easy</div></div>
+      <div class="set-line"><div class="set-name">Drill Reminders</div><div class="set-detail">4×25 breast — one drill each: pullout / kick / timing / full stroke</div></div>
+      <div class="set-line"><div class="set-name">Race Feel Set</div><div class="set-detail">6×50 breast on 2:30<br>Odd: 25 easy / 25 race sprint<br>Even: full 50 controlled race pace<br>Relax into the speed — trust the 5 weeks of training</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy + full stretch</div></div>
+      <span class="day-total">~1,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">18</div><div class="day-meta"><div class="day-title">🏆 Time Trial Day</div><div class="day-sub">Fri · ~2,500m · Max Effort</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">800 free + 200 breast drill + 4×50 breast build to race pace</div></div>
+      <div class="set-line"><div class="set-name">50 Breast Time Trial</div><div class="set-detail">1×50 breast — MAX EFFORT from push-off · Full 10 min rest · Record time</div></div>
+      <div class="set-line"><div class="set-name">100 Breast Time Trial</div><div class="set-detail">1×100 breast — MAX EFFORT · Full 10 min rest · Record every 25 split</div></div>
+      <div class="set-line"><div class="set-name">Optional: 200 TT</div><div class="set-detail">1×200 breast — even splits · Full 15 min rest before attempting</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">500 free easy — celebrate your progress</div></div>
+      <div class="set-note" style="margin-top:8px;font-size:13px;color:#059669;font-weight:600">🎯 Compare to Week 1 baseline. Log in Tracker!</div>
+      <span class="day-total">~2,500m</span>
+    </div>
+  </div>
+</div>
+
+<!-- RACE STRATEGY -->
+<div id="p-race" class="page">
+  <div class="sec-head"><span class="sec-icon">🏁</span><h2>Race Strategy</h2></div>
+  <div class="evtabs">
+    <button class="evb active" onclick="showEv('br50',this)">50 Breast</button>
+    <button class="evb" onclick="showEv('br100',this)">100 Breast</button>
+    <button class="evb" onclick="showEv('br200',this)">200 Breast</button>
+  </div>
+  <div id="br50" class="evc active">
+    <div class="cga"><div class="chip cgo">Sprint · Timing Critical</div><h3 class="ct">50 Breast — Pullout Is Everything</h3><p class="cp2">In the 50, a perfect pullout off the start can be 30–40% of your total race. Sprint breaststroke uses a shorter glide and faster tempo — think explosive, not rhythmic.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">Race Model</h3><ul class="cu"><li><strong>Start pullout:</strong> Max distance — aim for 10m+ before first pull</li><li><strong>First 15m:</strong> Explosive tempo — short glide, aggressive kick</li><li><strong>15–35m:</strong> Maintain tempo, perfect timing on every stroke</li><li><strong>Final 15m:</strong> Turn pullout → max effort → touch wall on a kick finish</li></ul></div></div>
+    <div class="csa"><div class="chip cg">Quick Time Drops</div><ul class="cu"><li>Longer pullout → saves 0.3–0.5 sec</li><li>Narrower kick (practice daily) → saves 0.2–0.4 sec</li><li>Faster hand recovery (shoot hands) → saves 0.1–0.2 sec</li></ul></div>
+  </div>
+  <div id="br100" class="evc">
+    <div class="cga"><div class="chip cgo">Sprint-Endurance</div><h3 class="ct">100 Breast — Stroke Integrity Wins</h3><p class="cp2">The 100 breast is lost in the third 25 when kick width widens under fatigue. The swimmer who maintains narrow knees and snappy kick finish in the third 25 almost always wins.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">Pacing Model</h3><ul class="cu"><li><strong>First 50:</strong> Strong, slightly below max — feel controlled</li><li><strong>Third 25:</strong> Fight for the kick — knees in, snap the finish</li><li><strong>Last 25:</strong> Touch on a KICK, not a pull — time your finish</li></ul></div></div>
+    <div class="card"><div class="cb"><h3 class="ct">The Touch</h3><p class="cp2">Two hands simultaneously on the touchpad — must happen at the end of a full arm extension, not mid-stroke. Finish timing: arrive at the wall mid-glide with arms extended.</p></div></div>
+  </div>
+  <div id="br200" class="evc">
+    <div class="cga"><div class="chip cgo">Aerobic Power</div><h3 class="ct">200 Breast — Rhythm Is Your Weapon</h3><p class="cp2">The 200 breast is a race of rhythm. Find your tempo on lap 1 and hold it exactly through lap 8. Athletes who change tempo in the middle almost always fade at the end.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">4-Split Model</h3><ul class="cu"><li><strong>1st 50:</strong> Establish rhythm — don't go out too fast</li><li><strong>2nd 50:</strong> Lock in — every stroke identical</li><li><strong>3rd 50:</strong> Mental toughness — maintain kick integrity</li><li><strong>4th 50:</strong> Every ounce — finish with a kick on the wall</li></ul></div></div>
+  </div>
+  <div class="subsec">Race-Day Checklist</div>
+  <div class="clw"><ul class="checklist">
+    <li><span class="ci">✓</span><div><strong>Pullout:</strong> Practice 3 full pullouts in warm-up — confirm your breakout distance.</div></li>
+    <li><span class="ci">✓</span><div><strong>Timing:</strong> Repeat your mantra — "pull–breathe–kick–glide" during warm-up laps.</div></li>
+    <li><span class="ci">✓</span><div><strong>Touch:</strong> Two hands, simultaneous, on every turn and finish — no exceptions.</div></li>
+    <li><span class="ci">✓</span><div><strong>Finish:</strong> Time your last stroke to arrive at the wall on an arm extension, not a kick.</div></li>
+  </ul></div>
+</div>
+
+<!-- MISTAKES -->
+<div id="p-mistakes" class="page">
+  <div class="sec-head"><span class="sec-icon">⚠️</span><h2>Top 10 Mistakes</h2></div>
+  <div class="cda"><div class="chip cr">Mistake 1</div><h3 class="ct">Wide Knees on Kick</h3><p class="cp2">Knees spreading wider than hips is one of the biggest drag sources in all of swimming. It adds frontal resistance and reduces kick propulsion simultaneously.</p><div class="err"><b>Fix</b>Kick on back, watch your knees. Video from above. Knees must stay inside the hip line on every rep.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 2</div><h3 class="ct">Lifting the Head to Breathe</h3><p class="cp2">Actively lifting the head breaks body position and delays the kick. The head should rise naturally as the pull brings the shoulders up — not as an independent movement.</p><div class="err"><b>Fix</b>Arms-only drill with pull buoy — practice breath rising with the pull.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 3</div><h3 class="ct">Kick Before Hands Shoot</h3><p class="cp2">Starting the kick before the hands are fully extended kills the glide momentum and shortens the propulsive phase. Hands must be fully extended before the kick drives.</p><div class="err"><b>Fix</b>Timing drill — deliberately exaggerate the hands-lead-kick sequence.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 4</div><h3 class="ct">Too-Wide Pull</h3><p class="cp2">Hands pulling wider than the shoulders move water sideways rather than backward. The power phase of the pull is the insweep — which can only happen if the outsweep stays within shoulder-width.</p><div class="err"><b>Fix</b>Arms-only drill — mark shoulder-width with awareness on every rep.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 5</div><h3 class="ct">Short or Weak Pullout</h3><p class="cp2">A weak pullout off the wall is free time left on the table. Pulling too early wastes the glide speed. This single skill can account for 2–3 seconds of improvement.</p><div class="err"><b>Fix</b>Pullout-only practice sets at the start of every session — minimum 6 reps.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 6</div><h3 class="ct">No Ankle Catch</h3><p class="cp2">Failure to dorsiflex and evert the feet before the kick drive means you're pushing with the wrong surface. The soles and inside edges of the feet should face backward during the drive.</p><div class="err"><b>Fix</b>Kick on back, watch foot position at the catch moment.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 7</div><h3 class="ct">Kick Finish Not Snapping</h3><p class="cp2">A lazy kick finish that doesn't squeeze feet together loses the final propulsive impulse. The feet should snap together like a whip at the end of the drive.</p><div class="err"><b>Fix</b>Kickboard set: focus only on the snap-together finish of each kick.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 8</div><h3 class="ct">Hips Sinking in the Glide</h3><p class="cp2">If your hips drop during the glide, your drag increases dramatically. The streamline position must be maintained with hips up and body flat throughout the glide phase.</p><div class="err"><b>Fix</b>3-glide drill — hold the position for 3 full seconds and feel if hips sag.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 9</div><h3 class="ct">Forgetting the Two-Hand Touch</h3><p class="cp2">A one-hand touch in breaststroke is an automatic disqualification. It happens most often on the last length when swimmers are fatigued. Practice two-hand touches on every single turn.</p><div class="err"><b>Fix</b>Turn practice sets — two-hand touch is non-negotiable on every rep.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 10</div><h3 class="ct">Going Out Too Fast</h3><p class="cp2">Breaststroke is the most affected stroke by pacing errors. Going out even one stroke-cycle too fast on the first 50 causes technique to collapse — knees widen, timing breaks — in the third 25.</p></div>
+</div>
+
+<!-- TRACKER -->
+<div id="p-tracker" class="page">
+  <div class="sec-head"><span class="sec-icon">📊</span><h2>Progress Tracker</h2></div>
+  <div class="ca" style="margin-bottom:12px"><p class="cp2" style="font-size:13px">Data saves automatically on your device.</p></div>
+  <div class="subsec">Baseline Times (Week 1)</div>
+  <div class="tgrid">
+    <div class="tc"><div class="tl">50 Breast — Current</div><input class="ti" id="tb1" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">100 Breast — Current</div><input class="ti" id="tb2" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">200 Breast — Current</div><input class="ti" id="tb3" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+  </div>
+  <div class="subsec">Goal Times (Week 6)</div>
+  <div class="tgrid">
+    <div class="tc"><div class="tl">50 Breast — Goal</div><input class="ti" id="tg1" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">100 Breast — Goal</div><input class="ti" id="tg2" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">200 Breast — Goal</div><input class="ti" id="tg3" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+  </div>
+  <div class="subsec">Weekly Log</div>
+  <div class="tscroll"><table class="logt">
+    <thead><tr><th>Week</th><th>Easy /25</th><th>Race /25</th><th>Pullout (m)</th><th>Notes</th></tr></thead>
+    <tbody id="log-body"></tbody>
+  </table></div>
+  <div class="qblock"><div class="qt">Perfect Timing Every Stroke</div><div class="qb">"Pull. Breathe. Kick. Glide.<br>Four words. Master all four.<br>That is breaststroke."</div></div>
+</div>
+
+</div>
+<div id="bottom-nav">
+  <button class="nav-item active" id="nb-home" onclick="goPage('p-home','nb-home')"><span class="ni">🏠</span><span class="nl">Home</span></button>
+  <button class="nav-item" id="nb-tech" onclick="goPage('p-tech','nb-tech')"><span class="ni">🎯</span><span class="nl">Tech</span></button>
+  <button class="nav-item" id="nb-drills" onclick="goPage('p-drills','nb-drills')"><span class="ni">⚡</span><span class="nl">Drills</span></button>
+  <button class="nav-item" id="nb-work" onclick="goPage('p-workouts','nb-work')"><span class="ni">📋</span><span class="nl">Workouts</span></button>
+  <button class="nav-item" id="nb-race" onclick="goPage('p-race','nb-race')"><span class="ni">🏁</span><span class="nl">Race</span></button>
+  <button class="nav-item" id="nb-track" onclick="goPage('p-tracker','nb-track')"><span class="ni">📊</span><span class="nl">Track</span></button>
+</div>
+</div>
+<script src="./stroke-app.js"></script>
+<script>initApp('br');</script>
+</body>
+</html>

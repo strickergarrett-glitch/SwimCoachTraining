@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a1628">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>Butterfly – Swim Coach</title>
+<link rel="stylesheet" href="./shared.css">
+<style>
+:root{
+  --stroke-primary:#ea580c;--stroke-light:#fdba74;--stroke-pale:#fff7ed;--stroke-dim:#fed7aa;
+  --stroke-grad1:#1a0a00;--stroke-grad2:#7c2d12;--stroke-grad3:#ea580c;
+}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="topbar">
+  <a href="index.html" class="tb-back">‹ Strokes</a>
+  <div class="tb-title">🦋 <span>Butterfly</span></div>
+  <button class="tb-more" onclick="toggleMenu()">⋯</button>
+</div>
+<div id="offline-badge">● Offline</div>
+<div id="overflow-menu" onclick="closeMenu()">
+  <div class="overflow-panel" onclick="event.stopPropagation()">
+    <button class="ov-item" onclick="goPage('p-home');closeMenu()"><span class="oi">🏠</span>Home</button>
+    <button class="ov-item" onclick="goPage('p-tech');closeMenu()"><span class="oi">🎯</span>Technique</button>
+    <button class="ov-item" onclick="goPage('p-drills');closeMenu()"><span class="oi">⚡</span>Drills</button>
+    <button class="ov-item" onclick="goPage('p-workouts');closeMenu()"><span class="oi">📋</span>Workouts</button>
+    <button class="ov-item" onclick="goPage('p-race');closeMenu()"><span class="oi">🏁</span>Race Strategy</button>
+    <button class="ov-item" onclick="goPage('p-mistakes');closeMenu()"><span class="oi">⚠️</span>Mistakes</button>
+    <button class="ov-item" onclick="goPage('p-tracker');closeMenu()"><span class="oi">📊</span>Tracker</button>
+    <a class="ov-item" href="index.html"><span class="oi">🔄</span>All Strokes</a>
+  </div>
+</div>
+<div id="scroll-area">
+
+<!-- HOME -->
+<div id="p-home" class="page active">
+  <div class="hero">
+    <div class="hero-eye">6-Week Training Manual</div>
+    <h1>Butterfly<br><em>Rhythm &amp; Power</em></h1>
+    <div class="hero-sub">Technique-First · 3 Days/Week · All Events</div>
+    <div class="hero-stats">
+      <div class="hs"><span class="n">6</span><span class="l">Weeks</span></div>
+      <div class="hs"><span class="n">18</span><span class="l">Workouts</span></div>
+      <div class="hs"><span class="n">10</span><span class="l">Drills</span></div>
+      <div class="hs"><span class="n">3</span><span class="l">Events</span></div>
+    </div>
+  </div>
+  <div class="sec-head"><span class="sec-icon">⚡</span><h2>Navigate</h2></div>
+  <div class="hgrid">
+    <div class="hcard" onclick="goPage('p-tech')"><span class="hi">🎯</span><div class="ht">Technique</div><div class="hs2">Core mechanics</div></div>
+    <div class="hcard" onclick="goPage('p-drills')"><span class="hi">⚡</span><div class="ht">Drills</div><div class="hs2">10 top drills</div></div>
+    <div class="hcard" onclick="goPage('p-workouts')"><span class="hi">📋</span><div class="ht">Workouts</div><div class="hs2">All 18 daily sessions</div></div>
+    <div class="hcard" onclick="goPage('p-race')"><span class="hi">🏁</span><div class="ht">Race Strategy</div><div class="hs2">50·100·200</div></div>
+    <div class="hcard" onclick="goPage('p-mistakes')"><span class="hi">⚠️</span><div class="ht">Mistakes</div><div class="hs2">Top 10 fixes</div></div>
+    <div class="hcard" onclick="goPage('p-tracker')"><span class="hi">📊</span><div class="ht">Tracker</div><div class="hs2">Log your progress</div></div>
+  </div>
+  <div class="ebox">
+    <h4>What Elite Butterflyers Do Differently</h4>
+    <ul>
+      <li>The undulation flows from the chest — not the hips</li>
+      <li>Two dolphin kicks per stroke cycle — the second kick drives the pull</li>
+      <li>Entry is fingertips-first, shoulder-width — no crossing over</li>
+      <li>The catch is a high-elbow EVF — same as freestyle</li>
+      <li>The breath is forward, not upward — chin just clears the water</li>
+      <li>Recovery is low and fast — skimming over the surface</li>
+      <li>Every underwater off the wall is the fastest part of the race</li>
+    </ul>
+  </div>
+  <div class="qblock">
+    <div class="qt">The Butterfly Principle</div>
+    <div class="qb">"Butterfly is not about strength — it is about rhythm.<br>Master the undulation. The power follows the wave."</div>
+  </div>
+</div>
+
+<!-- TECHNIQUE -->
+<div id="p-tech" class="page">
+  <div class="sec-head"><span class="sec-icon">🎯</span><h2>Core Mechanics</h2></div>
+  <div class="subsec">1 · Body Undulation</div>
+  <div class="cga"><div class="chip cgo">The Engine of Butterfly</div>
+    <h3 class="ct">The Wave Motion</h3>
+    <p class="cp2">Butterfly is driven by a wave that passes through the entire body — from chest to hips to feet. It is NOT an up-and-down bobbing motion. The hips rise as the chest presses down, and vice versa.</p>
+    <ul class="cu">
+      <li><strong>Chest press:</strong> Press chest DOWN as arms enter — hips rise</li>
+      <li><strong>Hip drive:</strong> Hips press down as arms pull — upper body rises for breath</li>
+      <li>Think "chest → hips → knees → feet" — a sequential wave</li>
+      <li>The undulation should feel effortless — fighting it is what makes butterfly exhausting</li>
+    </ul>
+    <div class="feel"><b>Feel</b>A smooth wave passing through your body from front to back. If your lower back aches, you are bending — not undulating. The movement is sequential, not simultaneous.</div>
+  </div>
+  <div class="subsec">2 · The Double Dolphin Kick</div>
+  <div class="ca"><div class="chip cp">Timing Is Everything</div>
+    <h3 class="ct">Two Kicks Per Stroke Cycle</h3>
+    <p class="cp2">There are two dolphin kicks in every butterfly stroke cycle. The timing of these kicks is critical to an efficient, sustainable butterfly.</p>
+    <ul class="cu">
+      <li><strong>First kick:</strong> Occurs at hand entry — drives hips down and sets up the pull</li>
+      <li><strong>Second kick:</strong> Occurs during the pull push phase — accelerates the body forward</li>
+      <li>Kick is driven from the hips — knees bend slightly, ankles whip</li>
+      <li>Feet stay together throughout — a single-fin motion</li>
+      <li>Kick amplitude: moderate — not too large (inefficient) or too small (no propulsion)</li>
+    </ul>
+    <div class="feel"><b>Feel</b>The second kick should feel like it's pushing you through the water as your hands exit. The first kick should feel like it's setting up the catch.</div>
+  </div>
+  <div class="subsec">3 · The Pull — Keyhole Pattern</div>
+  <div class="ca"><div class="chip cp">Maximum Propulsion</div>
+    <h3 class="ct">Wide Out, Narrow In</h3>
+    <p class="cp2">The butterfly pull traces a "keyhole" or "hourglass" shape — wide outsweep to set the catch, narrow powerful insweep under the body, then push to exit.</p>
+    <ul class="cu">
+      <li><strong>Entry:</strong> Shoulder-width, fingertips first, thumbs slightly down</li>
+      <li><strong>Outsweep/catch:</strong> High elbow EVF — same as freestyle</li>
+      <li><strong>Insweep:</strong> Hands come toward center under chest — maximum power phase</li>
+      <li><strong>Finish:</strong> Hands push back past hips — exit thumbs down</li>
+      <li>Hands should reach shoulder-width at the catch, then narrow to hip-width under the chest</li>
+    </ul>
+    <div class="feel"><b>Feel</b>Solid pressure on the palms throughout the insweep. The pull should feel like you are moving the water from in front of you to behind you in one continuous line.</div>
+  </div>
+  <div class="subsec">4 · Entry & Recovery</div>
+  <div class="ca"><div class="chip cp">Speed vs. Drag</div>
+    <p class="cp2">The entry and recovery must be clean and efficient — excess drag here destroys butterfly rhythm for the rest of the stroke cycle.</p>
+    <ul class="cu">
+      <li><strong>Recovery:</strong> Low and wide — arms skim over the water surface, not high in the air</li>
+      <li><strong>Entry:</strong> Shoulder-width — arms enter simultaneously, fingertips first</li>
+      <li>Never cross the hands on entry — this kills the catch and causes crossover</li>
+      <li>Recovery should be relaxed — if it feels tight, your pull exited too late</li>
+    </ul>
+  </div>
+  <div class="subsec">5 · Breathing</div>
+  <div class="ca"><div class="chip cp">Forward Not Upward</div>
+    <p class="cp2">Butterfly breathing is the most technique-dependent breath in all four strokes. Getting it wrong creates massive drag. Getting it right costs almost nothing.</p>
+    <ul class="cu">
+      <li>Head moves FORWARD with the body's natural rise — not lifted independently</li>
+      <li>Chin just clears the water — eyes look forward, not up</li>
+      <li>Breath occurs at the end of the insweep as arms pass the hips</li>
+      <li>Head drops back into the water before arms re-enter</li>
+      <li>Sprint butterfly: every 2–3 strokes · Distance: every stroke or every 2</li>
+    </ul>
+    <div class="feel"><b>Feel</b>The water lapping at your chin — not clearing your entire face. A low breath is a fast breath in butterfly.</div>
+  </div>
+  <div class="cgrid">
+    <div class="ccard"><span class="ccicon">🌊</span><div class="cctxt">"Chest down, hips up"</div><div class="ccsub">Undulation cue</div></div>
+    <div class="ccard"><span class="ccicon">⚡</span><div class="cctxt">"Kick drives the pull"</div><div class="ccsub">Timing cue</div></div>
+    <div class="ccard"><span class="ccicon">🎯</span><div class="cctxt">"Catch wide, pull narrow"</div><div class="ccsub">Pull cue</div></div>
+    <div class="ccard"><span class="ccicon">💨</span><div class="cctxt">"Chin forward, not up"</div><div class="ccsub">Breath cue</div></div>
+  </div>
+</div>
+
+<!-- DRILLS -->
+<div id="p-drills" class="page">
+  <div class="sec-head"><span class="sec-icon">⚡</span><h2>Top 10 Drills</h2></div>
+  <div class="ca" style="margin-bottom:14px"><p class="cp2" style="font-size:13px"><strong>Key:</strong> All butterfly drills should be done with fins initially. Fins teach the undulation rhythm and reduce fatigue so you can focus on technique, not survival.</p></div>
+  <div class="card"><div class="cb"><div class="dnum">01</div><div class="dtit">Body Dolphin (with fins)</div><p class="cp2">Arms at sides, dolphin kick only. No arms. Focus purely on the wave motion passing from chest to feet. This is the most fundamental butterfly drill.</p><div class="feel"><b>Feel</b>A wave starting at the chest as it presses down, rolling through the hips and out through the feet. Smooth and continuous — not jerky.</div><div class="err"><b>Mistake</b>Bending only at the hips — the wave must start at the CHEST, not the waist.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">02</div><div class="dtit">Underwater Dolphin Kick on Stomach</div><p class="cp2">Push off the wall in streamline on your stomach, dolphin kick underwater for the full length if possible. Builds kick power and undulation pattern simultaneously.</p><div class="feel"><b>Feel</b>Body accelerating with each kick — hips driving down, feet whipping.</div><div class="err"><b>Mistake</b>Kicking from the knees — power must come from the core and hips.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">03</div><div class="dtit">Single-Arm Butterfly</div><p class="cp2">One arm pulls while the other extends forward. Alternate which arm pulls. Isolates each arm's pull pattern and is easier to maintain than full butterfly.</p><div class="feel"><b>Feel</b>The pull arm following the keyhole pattern — out wide, in narrow, push back.</div><div class="err"><b>Mistake</b>Losing the kick timing — continue the double dolphin kick on every stroke.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">04</div><div class="dtit">3-Kick Butterfly (with fins)</div><p class="cp2">Take 3 dolphin kicks before each arm pull. Exaggerates the undulation rhythm and forces the kick to set up the pull properly.</p><div class="feel"><b>Feel</b>Building momentum with 3 kicks, then the pull feels like it "catches" on the wave.</div><div class="err"><b>Mistake</b>Stopping the undulation during the extra kicks — keep the wave flowing continuously.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">05</div><div class="dtit">Chest-Down Entry Drill</div><p class="cp2">Focus specifically on pressing the chest DOWN immediately after hand entry. This creates the hip rise that drives the first kick and sets up the catch.</p><div class="feel"><b>Feel</b>Hands enter, chest instantly presses toward the pool bottom, hips rise, first kick follows naturally.</div><div class="err"><b>Mistake</b>Skipping the chest press — without it the hips stay flat and the undulation never begins.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">06</div><div class="dtit">Zip-Up Butterfly</div><p class="cp2">Swim butterfly but keep the elbows tucked against the body during recovery — a "zip-up" motion. Exaggerates a low, fast, efficient recovery pattern.</p><div class="feel"><b>Feel</b>Arms barely clearing the water surface on recovery — fast and relaxed.</div><div class="err"><b>Mistake</b>Lifting arms too high on recovery — think "skim the surface" not "soar over it."</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">07</div><div class="dtit">Fist Butterfly</div><p class="cp2">Swim butterfly with clenched fists to load the forearm during the catch and insweep phase. Same principle as freestyle fist drill.</p><div class="feel"><b>Feel</b>Forearm and elbow creating pressure during the insweep — not just fingertips.</div><div class="err"><b>Mistake</b>Losing the keyhole shape with fists — maintain the wide-out, narrow-in pattern.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">08</div><div class="dtit">Breathing Drill — Every Stroke</div><p class="cp2">Breathe on every single stroke, focusing on keeping the chin forward (not upward). Teaches efficient, low breathing position.</p><div class="feel"><b>Feel</b>Chin just clearing the water as the body rises naturally — not as a separate head lift.</div><div class="err"><b>Mistake</b>Eyes looking upward — eyes should look forward with chin on the water surface.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">09</div><div class="dtit">Vertical Dolphin Kick</div><p class="cp2">Tread water using only dolphin kick in the deep end — arms crossed on chest. Feet together, wave motion from the core. 30-second intervals.</p><div class="feel"><b>Feel</b>Rising and falling with each kick beat — core initiating, ankles finishing.</div><div class="err"><b>Mistake</b>Separating the feet — they must stay locked together throughout.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">10</div><div class="dtit">Full Butterfly with Fins — DPS Focus</div><p class="cp2">Full butterfly stroke with fins, focusing on maximum distance per stroke. Count strokes per 25 — aim for 6–9 strokes per 25m for high school swimmers.</p><div class="feel"><b>Feel</b>Each stroke covering maximum distance — the pull and kick both driving the glide forward.</div><div class="err"><b>Mistake</b>Rushing — butterfly power comes from patient timing, not fast stroking.</div></div></div>
+</div>
+
+<!-- WORKOUTS -->
+<div id="p-workouts" class="page">
+  <div class="sec-head"><span class="sec-icon">📋</span><h2>18 Daily Workouts</h2></div>
+  <div class="ca" style="margin-bottom:4px"><p class="cp2" style="font-size:13px"><strong>3 days/week for 6 weeks.</strong> Tap any day to expand. Butterfly is taxing — fins are recommended for all drill work, especially Weeks 1–3. Warm-ups and cool-downs in freestyle.</p></div>
+
+  <div class="week-label">Week 1 <span class="week-pill">Technique Foundation</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">1</div><div class="day-meta"><div class="day-title">Undulation + Dolphin Kick</div><div class="day-sub">Mon · ~1,800m · Easy/Drill</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">300 free easy + 100 fly easy — feel your current stroke</div></div>
+      <div class="set-line"><div class="set-name">Undulation Foundation</div><div class="set-detail">8×25 WITH FINS on :50<br>1,2: Body dolphin — arms at sides, wave only<br>3,4: Underwater dolphin kick on stomach<br>5,6: Vertical dolphin kick in deep end (30 sec each)<br>7,8: Body dolphin again — feel improvement</div><div class="set-note">Do not rush to full butterfly. The wave must be learned first.</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×50 fly on 1:30 WITH fins — focus only on undulation, count strokes per 25</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~1,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">2</div><div class="day-meta"><div class="day-title">Single-Arm + Pull Pattern</div><div class="day-sub">Wed · ~2,000m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free easy</div></div>
+      <div class="set-line"><div class="set-name">Pull Drill Block</div><div class="set-detail">8×25 WITH fins on :55<br>1,2: Single-arm left (right arm forward)<br>3,4: Single-arm right (left arm forward)<br>5,6: Fist drill — feel forearm in insweep<br>7,8: Full stroke — apply keyhole pattern</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×50 fly on 1:30 WITH fins — alternating: 25 single-arm / 25 full stroke<br>Count strokes on full-stroke 25</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,000m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">3</div><div class="day-meta"><div class="day-title">Kick Timing + Breathing</div><div class="day-sub">Fri · ~2,200m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 100 fly kick on board</div></div>
+      <div class="set-line"><div class="set-name">Kick Timing Drill</div><div class="set-detail">6×25 fly WITH fins on :50 — 3-kick butterfly<br>3 kicks between each pull. Feel the kicks setting up the catch.</div></div>
+      <div class="set-line"><div class="set-name">Breathing Drill</div><div class="set-detail">4×25 fly on 1:00 — breathe on every stroke, chin forward only<br>Focus: eyes look forward, not up</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×50 fly on 1:30 WITH fins — hold DPS target, breathe every 2</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,200m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 2 <span class="week-pill">Technique Foundation</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">4</div><div class="day-meta"><div class="day-title">Entry + Recovery</div><div class="day-sub">Mon · ~2,200m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 100 fly kick</div></div>
+      <div class="set-line"><div class="set-name">Entry Drill Set</div><div class="set-detail">8×25 fly on :55<br>1-4: Chest-down entry drill WITH fins — press chest down hard on every entry<br>5-8: Zip-up recovery drill — arms skim the surface on recovery</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">8×50 fly on 1:30 WITH fins — focus on clean entry and low recovery<br>Count strokes — aim to reduce count from Week 1</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy</div></div>
+      <span class="day-total">~2,200m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">5</div><div class="day-meta"><div class="day-title">Underwater + Breakout</div><div class="day-sub">Wed · ~2,300m · Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free easy</div></div>
+      <div class="set-line"><div class="set-name">Underwater Set</div><div class="set-detail">8× push off on stomach in streamline — 5+ dolphin kicks before breakout<br>Goal: 10m+ underwater before first arm pull<br>Full rest between each</div><div class="set-note">Butterfly underwater is the fastest you will move in the entire race.</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×50 fly on 1:30 WITH fins — perfect underwater off every wall, hold DPS</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,300m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">6</div><div class="day-meta"><div class="day-title">Full Stroke Integration</div><div class="day-sub">Fri · ~2,400m · Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 200 fly easy WITH fins</div></div>
+      <div class="set-line"><div class="set-name">Technique Set</div><div class="set-detail">4×100 fly WITH fins on 2:10<br>Each 100 = 25 body dolphin / 25 single-arm / 25 drill of choice / 25 full stroke<br>Each phase must connect into the next</div></div>
+      <div class="set-line"><div class="set-name">Main Set — No Fins</div><div class="set-detail">6×25 fly WITHOUT fins on 1:00 — apply all technique, full rest<br>Count strokes, hold DPS even without fins</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy</div></div>
+      <span class="day-total">~2,400m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 3 <span class="week-pill">Power &amp; Efficiency</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">7</div><div class="day-meta"><div class="day-title">Power Sets + No Fins</div><div class="day-sub">Mon · ~2,500m · Moderate/Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 fly drill WITH fins</div></div>
+      <div class="set-line"><div class="set-name">Contrast Set</div><div class="set-detail">6×50 fly alternating on 1:20<br>Odd: WITH fins — feel the undulation at its best<br>Even: WITHOUT fins — replicate the same feeling<br>Connect the fin sensation to no-fin swimming</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">8×25 fly WITHOUT fins on 1:00 — strong, count strokes, full rest each</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,500m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">8</div><div class="day-meta"><div class="day-title">Breathing Patterns + Tempo</div><div class="day-sub">Wed · ~2,600m · Moderate/Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 fly kick</div></div>
+      <div class="set-line"><div class="set-name">Breathing Pattern Set</div><div class="set-detail">6×50 fly on 1:30 — rotate breathing patterns each rep<br>Rep 1: breathe every stroke · Rep 2: every 2 · Rep 3: every 3<br>Repeat pattern. Find which rate maintains best DPS.</div><div class="set-note">Your race breathing pattern = the pattern where DPS drops least.</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×100 fly on 2:00 WITH fins — strong aerobic effort, even splits, count strokes</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,600m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">9</div><div class="day-meta"><div class="day-title">Race Pace Introduction</div><div class="day-sub">Fri · ~2,700m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 fly build</div></div>
+      <div class="set-line"><div class="set-name">Underwater Set</div><div class="set-detail">6× max underwater push-offs on stomach — goal 10m+ every time</div></div>
+      <div class="set-line"><div class="set-name">Race Pace 50s</div><div class="set-detail">8×50 fly on 2:00 — descend 1–4, repeat 5–8<br>Last 2 reps at full race pace WITHOUT fins<br>Count strokes — hold DPS at race pace</div></div>
+      <div class="set-line"><div class="set-name">Race Sim</div><div class="set-detail">1×100 fly at goal pace WITHOUT fins — full rest 5 min</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy</div></div>
+      <span class="day-total">~2,700m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 4 <span class="week-pill">Power &amp; Efficiency</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">10</div><div class="day-meta"><div class="day-title">Kick Strength + Pull Power</div><div class="day-sub">Mon · ~2,700m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 4×25 fly drill</div></div>
+      <div class="set-line"><div class="set-name">Kick Power Set</div><div class="set-detail">8×25 fly kick on board on :45 — alternate easy and max effort<br>Max effort: same body wave, more power<br>Then 4×25 fly kick WITHOUT board — feel undulation through full body</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">5×100 fly on 2:00 — WITH fins, strong effort, count strokes, nail underwaters</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,700m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">11</div><div class="day-meta"><div class="day-title">Broken 200 Pacing</div><div class="day-sub">Wed · ~2,800m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 fly kick</div></div>
+      <div class="set-line"><div class="set-name">Broken 200 Fly</div><div class="set-detail">4×50 fly on 4:00 WITH fins — each 50 is one quarter of a 200 at goal pace<br>Add splits for projected 200 time<br>Even splits — consistency is more important than speed here</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">3×200 fly on 4:00 WITH fins — strong aerobic effort, even splits throughout</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 free easy</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">12</div><div class="day-meta"><div class="day-title">Back Half Builder</div><div class="day-sub">Fri · ~2,800m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 fly build</div></div>
+      <div class="set-line"><div class="set-name">Back Half Set</div><div class="set-detail">6×50 fly on 2:30 WITHOUT fins<br>25 easy (with fins optional) / 25 RACE PACE no fins<br>Focus: maintain undulation and kick timing under fatigue</div></div>
+      <div class="set-line"><div class="set-name">Race Sim</div><div class="set-detail">3×100 fly at goal race pace WITHOUT fins — 5 min rest each<br>Record splits — aim for 2nd 50 no more than 3–4 sec slower than first 50</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 5 <span class="week-pill">Race Readiness</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">13</div><div class="day-meta"><div class="day-title">Sprint Mechanics + Turns</div><div class="day-sub">Mon · ~2,600m · Strong/Race</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 fly kick + 4×25 fly build</div></div>
+      <div class="set-line"><div class="set-name">Turn + Underwater Set</div><div class="set-detail">10× approach from 10m out → two-hand touch → underwater to 15m<br>Full rest each — perfect execution every rep<br>Goal: 5+ dolphin kicks off every wall</div><div class="set-note">Two-hand simultaneous touch is required — practice this in every turn, always.</div></div>
+      <div class="set-line"><div class="set-name">Sprint 50s</div><div class="set-detail">6×50 fly on 2:30 WITHOUT fins — RACE PACE, perfect underwaters, count strokes</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,600m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">14</div><div class="day-meta"><div class="day-title">50 & 100 Race Sets</div><div class="day-sub">Wed · ~2,600m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">600 free descend + 4×25 fly race-pace efforts</div></div>
+      <div class="set-line"><div class="set-name">50 Fly Race Set</div><div class="set-detail">4×50 fly on 4:00 WITHOUT fins — full race effort<br>Record time, stroke count, underwater distance</div></div>
+      <div class="set-line"><div class="set-name">100 Fly Race Set</div><div class="set-detail">3×100 fly on 6:00 WITHOUT fins — race effort<br>Record all 25 splits · 2nd 50 should be within 3–4 sec of 1st 50</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,600m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">15</div><div class="day-meta"><div class="day-title">200 Race Simulation</div><div class="day-sub">Fri · ~2,800m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">600 free + 200 fly kick + 4×25 pace builders</div></div>
+      <div class="set-line"><div class="set-name">200 Fly Simulation</div><div class="set-detail">2×200 fly on 8:00 WITH fins — full race effort<br>Rep 1: Even splits — check stroke count every 50<br>Rep 2: Negative split — back 100 slightly faster<br>Record all splits</div></div>
+      <div class="set-line"><div class="set-name">Aerobic Set</div><div class="set-detail">6×50 fly on 1:30 WITH fins — 200 race pace, even effort</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 6 <span class="week-pill">Taper &amp; Time Trials</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">16</div><div class="day-meta"><div class="day-title">Sharpening — Quality Only</div><div class="day-sub">Mon · ~2,000m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 200 fly easy WITH fins</div></div>
+      <div class="set-line"><div class="set-name">Speed Work</div><div class="set-detail">8×25 fly on 2:00 WITHOUT fins — MAX effort, full rest<br>Perfect undulation, perfect entry, max underwater</div></div>
+      <div class="set-line"><div class="set-name">Race Pace 50s</div><div class="set-detail">4×50 fly on 4:00 WITHOUT fins — record each time</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy</div></div>
+      <span class="day-total">~2,000m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">17</div><div class="day-meta"><div class="day-title">Final Tune-Up</div><div class="day-sub">Wed · ~1,800m · Light/Race</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free easy</div></div>
+      <div class="set-line"><div class="set-name">Drill Reminders</div><div class="set-detail">4×25 fly WITH fins — one drill: undulation / kick timing / entry / breathing</div></div>
+      <div class="set-line"><div class="set-name">Race Feel Set</div><div class="set-detail">6×50 fly on 3:00<br>Odd: WITH fins — feel perfect butterfly<br>Even: WITHOUT fins — replicate it<br>Trust your training. The wave is in your body now.</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 free easy + full stretch</div></div>
+      <span class="day-total">~1,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">18</div><div class="day-meta"><div class="day-title">🏆 Time Trial Day</div><div class="day-sub">Fri · ~2,400m · Max Effort</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">800 free + 200 fly drill WITH fins + 4×50 fly build to race pace</div></div>
+      <div class="set-line"><div class="set-name">50 Fly Time Trial</div><div class="set-detail">1×50 fly — MAX EFFORT from push-off WITHOUT fins<br>Full 10 min rest · Record time and stroke count</div></div>
+      <div class="set-line"><div class="set-name">100 Fly Time Trial</div><div class="set-detail">1×100 fly — MAX EFFORT WITHOUT fins<br>Full 10 min rest · Record every 25 split</div></div>
+      <div class="set-line"><div class="set-name">Optional: 200 TT</div><div class="set-detail">1×200 fly WITH fins — even splits<br>Full 15 min rest before attempting</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 free easy — celebrate your progress</div></div>
+      <div class="set-note" style="margin-top:8px;font-size:13px;color:#059669;font-weight:600">🎯 Compare to Week 1 baseline. Log in Tracker!</div>
+      <span class="day-total">~2,400m</span>
+    </div>
+  </div>
+</div>
+
+<!-- RACE STRATEGY -->
+<div id="p-race" class="page">
+  <div class="sec-head"><span class="sec-icon">🏁</span><h2>Race Strategy</h2></div>
+  <div class="evtabs">
+    <button class="evb active" onclick="showEv('fl50',this)">50 Fly</button>
+    <button class="evb" onclick="showEv('fl100',this)">100 Fly</button>
+    <button class="evb" onclick="showEv('fl200',this)">200 Fly</button>
+  </div>
+  <div id="fl50" class="evc active">
+    <div class="cga"><div class="chip cgo">Sprint · Rhythm First</div><h3 class="ct">50 Fly — 2 Lengths of Perfect Butterfly</h3><p class="cp2">The 50 fly is won by the swimmer who maintains rhythm longest. Most swimmers rush their stroke and lose the undulation in the last 15m. Stay patient — let the wave carry you.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">Race Model</h3><ul class="cu"><li><strong>Start + underwater:</strong> Max dolphin kicks — 5+ off the block</li><li><strong>1st 25:</strong> Controlled power — don't sprint the undulation away</li><li><strong>Turn:</strong> Two-hand touch → max underwater → breakout on perfect timing</li><li><strong>Last 25:</strong> Drive the second kick — it's the power kick on every stroke</li></ul></div></div>
+    <div class="csa"><div class="chip cg">Quick Time Drops</div><ul class="cu"><li>Longer underwater off start → saves 0.2–0.4 sec</li><li>Lower breathing position → saves 0.15–0.25 sec</li><li>Maintain undulation to the wall → saves 0.3–0.5 sec</li></ul></div>
+  </div>
+  <div id="fl100" class="evc">
+    <div class="cga"><div class="chip cgo">Sprint-Endurance</div><h3 class="ct">100 Fly — The Back 50 Is Where It's Won</h3><p class="cp2">Every high school swimmer can have a great first 50 in butterfly. Elite 100 fly swimmers have a great SECOND 50. That requires training the back half in every speed session.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">Pacing Model</h3><ul class="cu"><li><strong>First 50:</strong> Controlled — feel powerful, not panicked</li><li><strong>50m turn:</strong> Perfect two-hand touch, max underwater</li><li><strong>Third 25:</strong> Maintain undulation — do NOT let it go flat</li><li><strong>Last 25:</strong> Drive the second kick on every stroke — it is your only fuel source</li></ul></div></div>
+    <div class="card"><div class="cb"><h3 class="ct">Split Target</h3><p class="cp2">Goal time × 0.46 = ideal first 50 split.<br>A 58.0 goal → first 50 in ~26.7.<br>If you go out in 25.5, the back 50 will be 34+.</p></div></div>
+  </div>
+  <div id="fl200" class="evc">
+    <div class="cga"><div class="chip cgo">Endurance Event</div><h3 class="ct">200 Fly — Rhythm Over Everything</h3><p class="cp2">The 200 fly is arguably the most mentally challenging race in swimming. It requires maintaining perfect technique for 8 lengths while lactic acid builds relentlessly. Rhythm is the only way through it.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">4-Split Model</h3><ul class="cu"><li><strong>1st 50:</strong> Longest strokes, easiest rhythm — you should feel too slow</li><li><strong>2nd 50:</strong> Lock in — every stroke identical, breathing every 2</li><li><strong>3rd 50:</strong> Mental toughness — second kick must stay sharp</li><li><strong>4th 50:</strong> Survival mode — maintain undulation above all else</li></ul></div></div>
+    <div class="cda"><div class="chip cr">Warning Sign</div><p class="cp2" style="font-size:13px">If your undulation disappears and the stroke becomes flat arm-pulling in the final 50, you went out too fast. Train the 3rd and 4th 50 specifically in your sessions.</p></div>
+  </div>
+  <div class="subsec">Race-Day Checklist</div>
+  <div class="clw"><ul class="checklist">
+    <li><span class="ci">✓</span><div><strong>Underwaters:</strong> Practice 3 full underwater breakouts in warm-up to confirm your dolphin kick distance.</div></li>
+    <li><span class="ci">✓</span><div><strong>Two-hand touch:</strong> Every warm-up turn is a mandatory two-hand practice.</div></li>
+    <li><span class="ci">✓</span><div><strong>Rhythm cue:</strong> During the race, cue "chest down" on every entry — it triggers the whole undulation.</div></li>
+    <li><span class="ci">✓</span><div><strong>Second kick:</strong> Remind yourself — the second kick drives the pull. Never let it die.</div></li>
+  </ul></div>
+</div>
+
+<!-- MISTAKES -->
+<div id="p-mistakes" class="page">
+  <div class="sec-head"><span class="sec-icon">⚠️</span><h2>Top 10 Mistakes</h2></div>
+  <div class="cda"><div class="chip cr">Mistake 1</div><h3 class="ct">Bending at the Hips (Not Undulating)</h3><p class="cp2">The most common butterfly error. The wave must start at the CHEST, not fold at the waist. Hip-only movement creates a "worm" pattern with no forward momentum.</p><div class="err"><b>Fix</b>Body dolphin drill daily — chest initiates every wave. Keep returning to this foundation.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 2</div><h3 class="ct">Only One Dolphin Kick Per Stroke</h3><p class="cp2">Butterfly requires TWO kicks per stroke cycle. The second kick — which occurs during the pull — is the most powerful and most commonly dropped kick in high school butterfly.</p><div class="err"><b>Fix</b>3-kick butterfly drill — exaggerates kick awareness. Count "1-2, 1-2" on every stroke cycle.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 3</div><h3 class="ct">Lifting the Head to Breathe</h3><p class="cp2">Independent head lifting creates drag and breaks the undulation pattern. The head should rise with the body's natural wave — chin just clearing the water, eyes forward.</p><div class="err"><b>Fix</b>Breathe-every-stroke drill — force the chin-forward position on every breath.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 4</div><h3 class="ct">High Recovery (Windmill Arms)</h3><p class="cp2">Arms swinging high in the air on recovery create unnecessary drag and disrupt timing. Arms should skim low over the water surface — fast and relaxed.</p><div class="err"><b>Fix</b>Zip-up recovery drill — arms barely clear the water on every recovery.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 5</div><h3 class="ct">Crossover Entry</h3><p class="cp2">Hands entering inside shoulder-width causes the arms to cross and kills the catch position. Entry should be at exact shoulder-width, not inside it.</p><div class="err"><b>Fix</b>Entry drill — place entry at shoulder width on every rep. Video from front to check.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 6</div><h3 class="ct">No Chest Press on Entry</h3><p class="cp2">Entering without pressing the chest down immediately loses the first kick and the beginning of the undulation. Chest must press DOWN as arms enter — this drives the hips up and sets up the catch.</p><div class="err"><b>Fix</b>Chest-down entry drill — exaggerate the chest press on every rep.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 7</div><h3 class="ct">Weak Second Kick</h3><p class="cp2">The second kick — which should drive the pull — is often absent or tiny in fatigued swimmers. When the second kick dies, the stroke loses all its power and forward momentum.</p><div class="err"><b>Fix</b>Vertical dolphin kick training builds the specific muscles for the second kick.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 8</div><h3 class="ct">Early Breathing (Before Arms Pass Hips)</h3><p class="cp2">Breathing before the arms finish the push creates drag right at the power phase. The breath should begin as arms pass the hips — not before.</p><div class="err"><b>Fix</b>Single-arm drill with breathing focus — feel the breath's timing relative to arm exit.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 9</div><h3 class="ct">Breathing Every Stroke in Sprint Fly</h3><p class="cp2">Breathing every stroke in the 50 or 100 fly dramatically slows the stroke rate and kills the undulation rhythm. Sprint butterfly: every 2–3 strokes. The non-breathing strokes are always faster.</p></div>
+  <div class="cda"><div class="chip cr">Mistake 10</div><h3 class="ct">Going Out Too Fast — Losing the Wave</h3><p class="cp2">When butterfly goes out too fast, the undulation disappears first. Once the wave is gone, butterfly becomes an exhausting arm-pull survival stroke. Keep the wave — it is the entire stroke.</p></div>
+</div>
+
+<!-- TRACKER -->
+<div id="p-tracker" class="page">
+  <div class="sec-head"><span class="sec-icon">📊</span><h2>Progress Tracker</h2></div>
+  <div class="ca" style="margin-bottom:12px"><p class="cp2" style="font-size:13px">Data saves automatically on your device.</p></div>
+  <div class="subsec">Baseline Times (Week 1)</div>
+  <div class="tgrid">
+    <div class="tc"><div class="tl">50 Fly — Current</div><input class="ti" id="tb1" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">100 Fly — Current</div><input class="ti" id="tb2" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">200 Fly — Current</div><input class="ti" id="tb3" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+  </div>
+  <div class="subsec">Goal Times (Week 6)</div>
+  <div class="tgrid">
+    <div class="tc"><div class="tl">50 Fly — Goal</div><input class="ti" id="tg1" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">100 Fly — Goal</div><input class="ti" id="tg2" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">200 Fly — Goal</div><input class="ti" id="tg3" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+  </div>
+  <div class="subsec">Weekly Log</div>
+  <div class="tscroll"><table class="logt">
+    <thead><tr><th>Week</th><th>Easy /25</th><th>Race /25</th><th>UW (m)</th><th>Notes</th></tr></thead>
+    <tbody id="log-body"></tbody>
+  </table></div>
+  <div class="qblock"><div class="qt">Trust the Wave</div><div class="qb">"When butterfly feels effortless,<br>you have found the wave.<br>Train until that feeling is automatic."</div></div>
+</div>
+
+</div>
+<div id="bottom-nav">
+  <button class="nav-item active" id="nb-home" onclick="goPage('p-home','nb-home')"><span class="ni">🏠</span><span class="nl">Home</span></button>
+  <button class="nav-item" id="nb-tech" onclick="goPage('p-tech','nb-tech')"><span class="ni">🎯</span><span class="nl">Tech</span></button>
+  <button class="nav-item" id="nb-drills" onclick="goPage('p-drills','nb-drills')"><span class="ni">⚡</span><span class="nl">Drills</span></button>
+  <button class="nav-item" id="nb-work" onclick="goPage('p-workouts','nb-work')"><span class="ni">📋</span><span class="nl">Workouts</span></button>
+  <button class="nav-item" id="nb-race" onclick="goPage('p-race','nb-race')"><span class="ni">🏁</span><span class="nl">Race</span></button>
+  <button class="nav-item" id="nb-track" onclick="goPage('p-tracker','nb-track')"><span class="ni">📊</span><span class="nl">Track</span></button>
+</div>
+</div>
+<script src="./stroke-app.js"></script>
+<script>initApp('fly');</script>
+</body>
+</html>

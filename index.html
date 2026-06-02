@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Swim Coach">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0a1628">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>4-Stroke Swim Coach</title>
+<style>
+:root{
+  --font-ui:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  --font-cond:-apple-system,BlinkMacSystemFont,'SF Pro Display','Arial Narrow',Arial,sans-serif;
+  --navy:#0a1628;--navy2:#0e2240;
+  --safe-top:env(safe-area-inset-top,0px);--safe-bot:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overscroll-behavior:none;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-ui);background:#0a1628;color:#fff;overflow:hidden;position:fixed;width:100%}
+#app{display:flex;flex-direction:column;height:100vh;height:100dvh}
+.top{padding:calc(var(--safe-top)+16px) 20px 0;flex-shrink:0}
+.logo{font-family:var(--font-cond);font-size:1rem;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase}
+.scroll{flex:1;overflow-y:scroll;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;padding:0 0 calc(var(--safe-bot)+20px)}
+.scroll::-webkit-scrollbar{display:none}
+.hero-land{padding:24px 20px 16px;background:linear-gradient(160deg,#0a1628 0%,#0e2240 100%)}
+.hero-land h1{font-family:var(--font-cond);font-size:min(2.6rem,9vw);font-weight:900;line-height:1.05;margin-bottom:6px;letter-spacing:-.01em}
+.hero-land h1 em{font-style:normal;color:#22d3ee}
+.hero-land p{font-size:13px;color:rgba(255,255,255,.6);max-width:300px;line-height:1.6;margin-bottom:4px}
+.tag{display:inline-block;background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.3);color:#67e8f9;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:20px}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:20px 20px 10px}
+.stroke-card{margin:0 16px 12px;border-radius:18px;overflow:hidden;cursor:pointer;-webkit-user-select:none;user-select:none;transition:transform .15s,opacity .15s;box-shadow:0 4px 20px rgba(0,0,0,.3);text-decoration:none;display:block}
+.stroke-card:active{transform:scale(.97);opacity:.9}
+.stroke-inner{padding:20px;position:relative;overflow:hidden;min-height:110px;display:flex;flex-direction:column;justify-content:space-between}
+.stroke-card .bg-emoji{position:absolute;right:-10px;bottom:-10px;font-size:80px;opacity:.12;pointer-events:none;line-height:1}
+.stroke-top{display:flex;align-items:flex-start;justify-content:space-between}
+.stroke-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-bottom:4px}
+.stroke-name{font-family:var(--font-cond);font-size:1.6rem;font-weight:800;color:#fff;line-height:1;letter-spacing:.01em}
+.stroke-desc{font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.5;margin-top:6px;max-width:240px}
+.stroke-arrow{font-size:22px;color:rgba(255,255,255,.6);margin-top:4px;flex-shrink:0}
+.stroke-footer{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.stroke-pill{background:rgba(255,255,255,.15);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:rgba(255,255,255,.9)}
+/* Stroke gradients */
+.s-free{background:linear-gradient(135deg,#0e4d6b,#0e7490)}
+.s-back{background:linear-gradient(135deg,#1e3a5f,#2563eb)}
+.s-breast{background:linear-gradient(135deg,#3d1a4b,#7c3aed)}
+.s-fly{background:linear-gradient(135deg,#4a1a0a,#ea580c)}
+.stats-row{display:flex;gap:8px;margin:0 16px 20px}
+.stat-mini{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px;text-align:center}
+.stat-mini .n{font-family:var(--font-cond);font-size:1.5rem;font-weight:700;color:#22d3ee;display:block;line-height:1}
+.stat-mini .l{font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.05em}
+.divider{height:1px;background:rgba(255,255,255,.06);margin:0 16px 4px}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="top"><div class="logo">🏊 Swim Coach Pro</div></div>
+  <div class="scroll">
+    <div class="hero-land">
+      <div class="tag">Complete Training System</div>
+      <h1>Master All<br><em>4 Strokes</em></h1>
+      <p>6-week technique-first training plans for every competitive stroke. Choose your stroke to begin.</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-mini"><span class="n">4</span><span class="l">Strokes</span></div>
+      <div class="stat-mini"><span class="n">6</span><span class="l">Weeks</span></div>
+      <div class="stat-mini"><span class="n">72</span><span class="l">Workouts</span></div>
+      <div class="stat-mini"><span class="n">40+</span><span class="l">Drills</span></div>
+    </div>
+
+    <div class="section-label">Select Your Stroke</div>
+
+    <a class="stroke-card" href="freestyle.html">
+      <div class="stroke-inner s-free">
+        <div class="bg-emoji">🏊</div>
+        <div class="stroke-top">
+          <div>
+            <div class="stroke-label">Stroke 1</div>
+            <div class="stroke-name">Freestyle</div>
+            <div class="stroke-desc">Sprint mechanics, EVF catch, DPS optimization, underwater dolphins</div>
+          </div>
+          <div class="stroke-arrow">›</div>
+        </div>
+        <div class="stroke-footer">
+          <span class="stroke-pill">50 · 100 · 200 · 500</span>
+          <span class="stroke-pill">12 Drills</span>
+          <span class="stroke-pill">18 Workouts</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="stroke-card" href="backstroke.html">
+      <div class="stroke-inner s-back">
+        <div class="bg-emoji">🔄</div>
+        <div class="stroke-top">
+          <div>
+            <div class="stroke-label">Stroke 2</div>
+            <div class="stroke-name">Backstroke</div>
+            <div class="stroke-desc">Hip rotation, high elbow pull, flutter kick, backstroke flags</div>
+          </div>
+          <div class="stroke-arrow">›</div>
+        </div>
+        <div class="stroke-footer">
+          <span class="stroke-pill">50 · 100 · 200</span>
+          <span class="stroke-pill">10 Drills</span>
+          <span class="stroke-pill">18 Workouts</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="stroke-card" href="breaststroke.html">
+      <div class="stroke-inner s-breast">
+        <div class="bg-emoji">🐸</div>
+        <div class="stroke-top">
+          <div>
+            <div class="stroke-label">Stroke 3</div>
+            <div class="stroke-name">Breaststroke</div>
+            <div class="stroke-desc">Pullout, knee tracking, hip drive, timing & glide</div>
+          </div>
+          <div class="stroke-arrow">›</div>
+        </div>
+        <div class="stroke-footer">
+          <span class="stroke-pill">50 · 100 · 200</span>
+          <span class="stroke-pill">10 Drills</span>
+          <span class="stroke-pill">18 Workouts</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="stroke-card" href="butterfly.html">
+      <div class="stroke-inner s-fly">
+        <div class="bg-emoji">🦋</div>
+        <div class="stroke-top">
+          <div>
+            <div class="stroke-label">Stroke 4</div>
+            <div class="stroke-name">Butterfly</div>
+            <div class="stroke-desc">Body undulation, double dolphin kick, keyhole pull, breathing</div>
+          </div>
+          <div class="stroke-arrow">›</div>
+        </div>
+        <div class="stroke-footer">
+          <span class="stroke-pill">50 · 100 · 200</span>
+          <span class="stroke-pill">10 Drills</span>
+          <span class="stroke-pill">18 Workouts</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="divider"></div>
+    <div class="section-label">About This App</div>
+    <div style="margin:0 16px 20px;background:rgba(255,255,255,.05);border-radius:14px;padding:16px">
+      <p style="font-size:13.5px;color:rgba(255,255,255,.75);line-height:1.7">Each stroke manual includes complete <strong style="color:#fff">technique breakdowns</strong>, <strong style="color:#fff">progressive drills</strong>, a full <strong style="color:#fff">6-week training plan</strong> with detailed daily workouts, race strategy by event, dryland & recovery, the top 10 mistakes, and a progress tracker — all works offline once loaded.</p>
+    </div>
+  </div>
+</div>
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('./sw.js').catch(function(){});
+  });
+}
+</script>
+</body>
+</html>

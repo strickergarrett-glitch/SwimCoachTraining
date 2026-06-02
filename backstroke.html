@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a1628">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>Backstroke – Swim Coach</title>
+<link rel="stylesheet" href="./shared.css">
+<style>
+:root{
+  --stroke-primary:#2563eb;--stroke-light:#93c5fd;--stroke-pale:#eff6ff;--stroke-dim:#bfdbfe;
+  --stroke-grad1:#0a1628;--stroke-grad2:#1e3a5f;--stroke-grad3:#2563eb;
+}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="topbar">
+  <a href="index.html" class="tb-back">‹ Strokes</a>
+  <div class="tb-title">🔄 <span>Backstroke</span></div>
+  <button class="tb-more" onclick="toggleMenu()">⋯</button>
+</div>
+<div id="offline-badge">● Offline</div>
+<div id="overflow-menu" onclick="closeMenu()">
+  <div class="overflow-panel" onclick="event.stopPropagation()">
+    <button class="ov-item" onclick="goPage('p-home');closeMenu()"><span class="oi">🏠</span>Home</button>
+    <button class="ov-item" onclick="goPage('p-tech');closeMenu()"><span class="oi">🎯</span>Technique</button>
+    <button class="ov-item" onclick="goPage('p-drills');closeMenu()"><span class="oi">⚡</span>Drills</button>
+    <button class="ov-item" onclick="goPage('p-workouts');closeMenu()"><span class="oi">📋</span>Workouts</button>
+    <button class="ov-item" onclick="goPage('p-race');closeMenu()"><span class="oi">🏁</span>Race Strategy</button>
+    <button class="ov-item" onclick="goPage('p-mistakes');closeMenu()"><span class="oi">⚠️</span>Mistakes</button>
+    <button class="ov-item" onclick="goPage('p-tracker');closeMenu()"><span class="oi">📊</span>Tracker</button>
+    <a class="ov-item" href="index.html"><span class="oi">🔄</span>All Strokes</a>
+  </div>
+</div>
+<div id="scroll-area">
+
+<!-- HOME -->
+<div id="p-home" class="page active">
+  <div class="hero">
+    <div class="hero-eye">6-Week Training Manual</div>
+    <h1>Backstroke<br><em>Power & Balance</em></h1>
+    <div class="hero-sub">Technique-First · 3 Days/Week · All Events</div>
+    <div class="hero-stats">
+      <div class="hs"><span class="n">6</span><span class="l">Weeks</span></div>
+      <div class="hs"><span class="n">18</span><span class="l">Workouts</span></div>
+      <div class="hs"><span class="n">10</span><span class="l">Drills</span></div>
+      <div class="hs"><span class="n">3</span><span class="l">Events</span></div>
+    </div>
+  </div>
+  <div class="sec-head"><span class="sec-icon">⚡</span><h2>Navigate</h2></div>
+  <div class="hgrid">
+    <div class="hcard" onclick="goPage('p-tech')"><span class="hi">🎯</span><div class="ht">Technique</div><div class="hs2">Core mechanics</div></div>
+    <div class="hcard" onclick="goPage('p-drills')"><span class="hi">⚡</span><div class="ht">Drills</div><div class="hs2">10 top drills</div></div>
+    <div class="hcard" onclick="goPage('p-workouts')"><span class="hi">📋</span><div class="ht">Workouts</div><div class="hs2">All 18 daily sessions</div></div>
+    <div class="hcard" onclick="goPage('p-race')"><span class="hi">🏁</span><div class="ht">Race Strategy</div><div class="hs2">50·100·200</div></div>
+    <div class="hcard" onclick="goPage('p-mistakes')"><span class="hi">⚠️</span><div class="ht">Mistakes</div><div class="hs2">Top 10 fixes</div></div>
+    <div class="hcard" onclick="goPage('p-tracker')"><span class="hi">📊</span><div class="ht">Tracker</div><div class="hs2">Log your progress</div></div>
+  </div>
+  <div class="ebox">
+    <h4>What Elite Backstrokers Do Differently</h4>
+    <ul>
+      <li>High hips — body nearly horizontal, ears in the water</li>
+      <li>Shoulder rotation 45–60° drives the pull power</li>
+      <li>Entry is pinky-first, arm fully extended past the shoulder line</li>
+      <li>High elbow bent pull — not a straight-arm sweep</li>
+      <li>6-beat kick drives rotation and maintains position</li>
+      <li>Flags mastery — same stroke count to the wall every time</li>
+      <li>Backstroke turn is a race within a race — practice it daily</li>
+    </ul>
+  </div>
+  <div class="qblock">
+    <div class="qt">The Backstroke Principle</div>
+    <div class="qb">"Your rotation is your engine.<br>Your kick is your balance.<br>Your flags are your GPS."</div>
+  </div>
+</div>
+
+<!-- TECHNIQUE -->
+<div id="p-tech" class="page">
+  <div class="sec-head"><span class="sec-icon">🎯</span><h2>Core Mechanics</h2></div>
+  <div class="subsec">1 · Body Position</div>
+  <div class="ca"><div class="chip cp">Foundation</div>
+    <h3 class="ct">High Hip Position</h3>
+    <p class="cp2">Hips should ride at or very near the surface. The most common flaw in high school backstroke is sitting in the water — hips too low, creating drag and slowing rotation.</p>
+    <ul class="cu">
+      <li><strong>Head:</strong> Neutral — ears in the water, chin slightly tucked, eyes look up</li>
+      <li><strong>Hips:</strong> Use kick to keep them at surface level</li>
+      <li><strong>Core:</strong> Engaged throughout — prevents hip sag on the pulling side</li>
+      <li><strong>Body line:</strong> Think "plank on water" — stiff and flat between strokes</li>
+    </ul>
+    <div class="feel"><b>Feel</b>The water surface should lap at your ear level. If you can see your chest, your hips are probably sinking.</div>
+  </div>
+  <div class="subsec">2 · Entry & Extension</div>
+  <div class="ca"><div class="chip cp">Sets Up Everything</div>
+    <h3 class="ct">Pinky-First Entry</h3>
+    <p class="cp2">The recovering arm enters pinky-first, directly behind the shoulder — NOT across the body centerline. Crossing over causes fish-tailing and kills rotation.</p>
+    <ul class="cu">
+      <li>Entry at the 11 o'clock or 1 o'clock position (not 12)</li>
+      <li>Arm enters fully extended — reach as far back as possible</li>
+      <li>Immediately after entry, press down and outward to set the catch</li>
+      <li>Entry should be silent — splashing means you're slapping, not slicing</li>
+    </ul>
+    <div class="feel"><b>Feel</b>Your arm entering the water like a blade, index finger last. A smooth silent entry means good arm angle.</div>
+  </div>
+  <div class="subsec">3 · High Elbow Pull</div>
+  <div class="ca"><div class="chip cp">Most Power</div>
+    <h3 class="ct">Bent-Arm Pull Pattern</h3>
+    <p class="cp2">Unlike the old "straight arm windmill" technique, elite backstroke uses a bent elbow at approximately 90° at the deepest point of the pull — maximizing water grip.</p>
+    <ul class="cu">
+      <li>After entry: press hand outward and downward to set catch</li>
+      <li>Elbow bends to ~90° as hand presses toward feet</li>
+      <li>Hand stays outside the body line during the pull</li>
+      <li>Finish: push hand toward thigh, then exit thumb-first</li>
+    </ul>
+    <div class="feel"><b>Feel</b>Pressure on the entire palm through the pull. If pressure disappears mid-stroke, you slipped off the catch.</div>
+  </div>
+  <div class="subsec">4 · Rotation</div>
+  <div class="ca"><div class="chip cp">Power Engine</div>
+    <p class="cp2">Shoulder rotation of 45–60° per side is where backstroke power comes from. The pulling shoulder drops, the recovering shoulder rises — and this drives the stroke.</p>
+    <ul class="cu">
+      <li>Think: "rotate toward the pulling arm"</li>
+      <li>Hip rotation follows shoulder — they move together</li>
+      <li>Don't over-rotate: beyond 60° creates balance issues</li>
+      <li>Kick drives and controls rotation timing</li>
+    </ul>
+  </div>
+  <div class="subsec">5 · Kick</div>
+  <div class="ca"><div class="chip cp">6-Beat Flutter</div>
+    <ul class="cu">
+      <li>Continuous 6-beat kick — same mechanics as freestyle kick on your back</li>
+      <li>Drive from the hip — knee barely bends, ankle whips</li>
+      <li>Kick width stays narrow — toes should break the surface only slightly</li>
+      <li>Kick maintains body position AND drives rotation</li>
+    </ul>
+    <div class="feel"><b>Feel</b>Feet fluttering just at the surface — you should see small ripples, not big splashes.</div>
+  </div>
+  <div class="subsec">6 · Flags & Turns</div>
+  <div class="cga"><div class="chip cgo">Free Time</div>
+    <h3 class="ct">Master the Flags</h3>
+    <p class="cp2">The backstroke flags are 5m from the wall. Every elite backstroker knows exactly how many strokes from the flags to the wall — and hits the turn perfectly every time.</p>
+    <ul class="cu">
+      <li>Count strokes from flags: typically 3–5 for high school swimmers</li>
+      <li>Practice this count in every single turn during workouts</li>
+      <li>The flip turn: rotate to stomach on the last stroke, flip, push off on your back</li>
+      <li>Underwater: 3–5 dolphin kicks before breakout</li>
+    </ul>
+    <div class="feel"><b>Feel</b>Seeing the flags and immediately locking into your count. No looking at the wall — trust your stroke count.</div>
+  </div>
+  <div class="cgrid">
+    <div class="ccard"><span class="ccicon">📌</span><div class="cctxt">"Pinky in first"</div><div class="ccsub">Entry cue</div></div>
+    <div class="ccard"><span class="ccicon">🌀</span><div class="cctxt">"Rotate toward the pull"</div><div class="ccsub">Rotation cue</div></div>
+    <div class="ccard"><span class="ccicon">🦵</span><div class="cctxt">"Kick at the surface"</div><div class="ccsub">Kick cue</div></div>
+    <div class="ccard"><span class="ccicon">🚩</span><div class="cctxt">"Flags = start counting"</div><div class="ccsub">Turn cue</div></div>
+  </div>
+</div>
+
+<!-- DRILLS -->
+<div id="p-drills" class="page">
+  <div class="sec-head"><span class="sec-icon">⚡</span><h2>Top 10 Drills</h2></div>
+  <div class="ca" style="margin-bottom:14px"><p class="cp2" style="font-size:13px"><strong>Key:</strong> Backstroke drills are best done with a snorkel or in calm water. Focus on what you feel — you cannot see yourself swimming backstroke.</p></div>
+  <div class="card"><div class="cb"><div class="dnum">01</div><div class="dtit">Single-Arm Backstroke</div><p class="cp2">One arm extended above head, pull with the other only. Opposite arm stays still at side. Rotate fully on each stroke.</p><div class="feel"><b>Feel</b>Full shoulder rotation per stroke — shoulder nearly pointing at the ceiling on each pull.</div><div class="err"><b>Mistake</b>Not rotating enough — the whole point is exaggerated rotation to train the hip-shoulder connection.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">02</div><div class="dtit">Catch-Up Backstroke</div><p class="cp2">Wait for the recovering arm to reach full extension before pulling. Slows everything down and isolates each phase.</p><div class="feel"><b>Feel</b>A brief pause at full extension — both arms briefly in "Superman" position above your head.</div><div class="err"><b>Mistake</b>Rushing into the pull — deliberately pause and feel the full extension.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">03</div><div class="dtit">Fist Backstroke</div><p class="cp2">Swim backstroke with clenched fists. Forces the forearm and bent-elbow pull pattern to engage.</p><div class="feel"><b>Feel</b>Forearm pressure during the pull phase — not just fingertip pushing.</div><div class="err"><b>Mistake</b>Straight arming it — bend that elbow to 90° even with fists.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">04</div><div class="dtit">Kick on Back (Streamline)</div><p class="cp2">Arms in streamline above head, kick on your back. Builds core stability and back-kick technique simultaneously.</p><div class="feel"><b>Feel</b>Hips floating at surface, small foot ripples, not large splashes.</div><div class="err"><b>Mistake</b>Letting hips sag — engage core actively throughout.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">05</div><div class="dtit">3-Stroke / Switch Drill</div><p class="cp2">3 strokes on left, 3 strokes on right, alternating. Exaggerates each side's rotation and pull mechanics.</p><div class="feel"><b>Feel</b>Distinct shoulder drop on the pulling side, clean entry on the recovering side.</div><div class="err"><b>Mistake</b>Losing body position between switches — stay tight and stable.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">06</div><div class="dtit">High Elbow Drill (Dry Land)</div><p class="cp2">Standing or lying on bench: practice the bent-arm pull pattern from entry to exit. No water needed — grooves the joint pattern.</p><div class="feel"><b>Feel</b>Elbow bending to 90° as the "hand" presses toward feet. Exit thumb-first.</div><div class="err"><b>Mistake</b>Keeping the elbow straight — the bent pull is the whole point.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">07</div><div class="dtit">Flags Count Practice</div><p class="cp2">Swim at moderate pace. Every time you pass under the flags, count your strokes to the wall. Find and memorize your count.</p><div class="feel"><b>Feel</b>Locked-in certainty about your distance — no need to turn head or search for the wall.</div><div class="err"><b>Mistake</b>Varying effort — count at race pace, drill pace, and easy pace (they may differ).</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">08</div><div class="dtit">Rotation on Kickboard</div><p class="cp2">Kick on back holding kickboard on chest. Rotate the kickboard side to side with each kick beat — exaggerates hip rotation feel.</p><div class="feel"><b>Feel</b>Hips pivoting with each kick, body rotating cleanly side to side.</div><div class="err"><b>Mistake</b>Isolating rotation to just the board — the whole torso should rotate.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">09</div><div class="dtit">Entry & Extension Drill</div><p class="cp2">Slow-motion backstroke focusing only on the entry — arm enters pinky-first, reaches full extension before next arm moves.</p><div class="feel"><b>Feel</b>Silent entry like a blade, maximum reach behind the head.</div><div class="err"><b>Mistake</b>Splashing on entry — means the hand is entering flat. Rotate wrist so pinky leads.</div></div></div>
+  <div class="card"><div class="cb"><div class="dnum">10</div><div class="dtit">Underwater Dolphin Kick on Back</div><p class="cp2">Push off wall on back in streamline. 5+ dolphin kicks before breakout. Arms tight above head, core locked.</p><div class="feel"><b>Feel</b>Body undulating smoothly — hips drive up, feet drive down. Speed building with each kick.</div><div class="err"><b>Mistake</b>Kicking from knees — power must come from the core/hip, whipping to ankles.</div></div></div>
+</div>
+
+<!-- WORKOUTS -->
+<div id="p-workouts" class="page">
+  <div class="sec-head"><span class="sec-icon">📋</span><h2>18 Daily Workouts</h2></div>
+  <div class="ca" style="margin-bottom:4px"><p class="cp2" style="font-size:13px"><strong>3 days/week for 6 weeks.</strong> Tap any day to expand. Warm-up and cool-down are always in freestyle unless specified.</p></div>
+
+  <div class="week-label">Week 1 <span class="week-pill">Technique Foundation</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">1</div><div class="day-meta"><div class="day-title">Body Position + Entry</div><div class="day-sub">Mon · ~2,000m · Easy/Drill</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">300 free easy + 100 back easy — feel the difference in body position</div></div>
+      <div class="set-line"><div class="set-name">Kick Set</div><div class="set-detail">6×25 kick on back on :45 — streamline arms, focus on hips at surface</div></div>
+      <div class="set-line"><div class="set-name">Entry Drill Block</div><div class="set-detail">6×25 on :50 — entry & extension drill, slow-motion, pinky first, reach maximum extension before pulling</div><div class="set-note">Silent entry is the goal. Zero splash = perfect.</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×50 back on 1:20 — focus only on entry and body position, count strokes/25</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy free</div></div>
+      <span class="day-total">~2,000m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">2</div><div class="day-meta"><div class="day-title">Rotation + Single-Arm</div><div class="day-sub">Wed · ~2,200m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free easy</div></div>
+      <div class="set-line"><div class="set-name">Rotation Drill Block</div><div class="set-detail">8×25 back on :50<br>1,2: Single-arm left<br>3,4: Single-arm right<br>5,6: 3-stroke switch drill<br>7,8: Catch-up backstroke</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">8×50 back on 1:15 — full stroke, focus on shoulder rotation, count strokes per 25</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy</div></div>
+      <span class="day-total">~2,200m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">3</div><div class="day-meta"><div class="day-title">Flags + Turn Intro</div><div class="day-sub">Fri · ~2,300m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free easy + 100 back kick</div></div>
+      <div class="set-line"><div class="set-name">Flags Drill</div><div class="set-detail">10× 25 back — count strokes from flags to wall every rep<br>Find YOUR number. Aim for consistency.</div><div class="set-note">This is the single most undercoached skill in high school backstroke.</div></div>
+      <div class="set-line"><div class="set-name">Turn Practice</div><div class="set-detail">8× turn only — approach at 75%, perfect turn, 3+ dolphin kicks, breakout stroke<br>Focus on counting strokes from flags to turn</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×100 back on 2:00 — count strokes, practice flags count on every wall</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy free</div></div>
+      <span class="day-total">~2,300m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 2 <span class="week-pill">Technique Foundation</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">4</div><div class="day-meta"><div class="day-title">Bent-Arm Pull Pattern</div><div class="day-sub">Mon · ~2,400m · Drill/Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 100 back kick streamline</div></div>
+      <div class="set-line"><div class="set-name">Fist Drill Set</div><div class="set-detail">8×25 back on :50 — fist drill, feel forearm pressure through bent-elbow pull<br>Then 4×25 open hand — feel amplified catch pressure</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×75 back on 1:30<br>25 single-arm left / 25 single-arm right / 25 full stroke<br>Count strokes on the full-stroke 25</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 easy free</div></div>
+      <span class="day-total">~2,400m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">5</div><div class="day-meta"><div class="day-title">Underwater + Breakout</div><div class="day-sub">Wed · ~2,400m · Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 IM order (back, breast, fly, free) easy</div></div>
+      <div class="set-line"><div class="set-name">Underwater Backstroke Set</div><div class="set-detail">8× push off on back in streamline — 5+ dolphin kicks before breakout<br>Count kick to see how far you can go before needing to breathe</div><div class="set-note">Goal: maintain underwater until past the 7m mark.</div></div>
+      <div class="set-line"><div class="set-name">Breakout Drill</div><div class="set-detail">8×25 back on :50 — focus only on the perfect first pull after breakout</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">6×50 back on 1:15 — hold stroke count, nail every underwater</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy free</div></div>
+      <span class="day-total">~2,400m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">6</div><div class="day-meta"><div class="day-title">Full Stroke Integration</div><div class="day-sub">Fri · ~2,500m · Moderate</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 200 back easy</div></div>
+      <div class="set-line"><div class="set-name">Technique Set</div><div class="set-detail">4×100 back on 2:00<br>Each 100 = 25 drill / 25 build / 25 strong / 25 easy<br>Drill = weakest technique from this week</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">8×50 back on 1:15 — strong, hold DPS target, nail every turn + underwater</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 easy free</div></div>
+      <span class="day-total">~2,500m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 3 <span class="week-pill">Power &amp; Efficiency</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">7</div><div class="day-meta"><div class="day-title">Pull Buoy + Paddles</div><div class="day-sub">Mon · ~2,600m · Moderate/Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 back drill of choice</div></div>
+      <div class="set-line"><div class="set-name">Paddle Pull Set</div><div class="set-detail">6×50 back with paddles only (no pull buoy) on 1:10<br>Paddles amplify every arm position error — focus on bent-elbow pull</div><div class="set-note">Remove paddles immediately if shoulder pain occurs.</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">10×50 back on 1:15 — without gear, hold DPS target from Weeks 1–2</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy free</div></div>
+      <span class="day-total">~2,600m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">8</div><div class="day-meta"><div class="day-title">Tempo Training</div><div class="day-sub">Wed · ~2,700m · Moderate/Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 back kick</div></div>
+      <div class="set-line"><div class="set-name">Descending Tempo Set</div><div class="set-detail">5×100 back on 2:00<br>Rep 1: Maximum DPS — longest possible strokes<br>Rep 2–4: Progressively increase tempo while holding DPS<br>Rep 5: Race tempo with held DPS — this is your target pace</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×200 back on 3:30 — strong aerobic pace, count strokes every 25, even splits</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy free</div></div>
+      <span class="day-total">~2,700m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">9</div><div class="day-meta"><div class="day-title">Race Pace Introduction</div><div class="day-sub">Fri · ~2,800m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 100 back kick + 4×25 back build sprints</div></div>
+      <div class="set-line"><div class="set-name">Underwater Set</div><div class="set-detail">6× wall push-off on back — 5+ dolphin kicks — nail the breakout first pull every time</div></div>
+      <div class="set-line"><div class="set-name">Race Pace 50s</div><div class="set-detail">8×50 back on 1:30 — descend 1–4, repeat 5–8<br>Count strokes — hold DPS even at race pace<br>Nail flags count every single rep</div></div>
+      <div class="set-line"><div class="set-name">Race Sim</div><div class="set-detail">1×100 back at goal race pace — full rest (5 min)<br>Record splits and stroke count per 25</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 easy free</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 4 <span class="week-pill">Power &amp; Efficiency</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">10</div><div class="day-meta"><div class="day-title">Fin Power Set</div><div class="day-sub">Mon · ~2,800m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 100 back drill</div></div>
+      <div class="set-line"><div class="set-name">Fin Set</div><div class="set-detail">6×50 back WITH fins on 1:00 — powerful fast kick, feel the hip drive<br>Then 6×50 back WITHOUT fins on 1:15 — maintain that same hip feeling</div><div class="set-note">The contrast teaches the proper kick hip drive.</div></div>
+      <div class="set-line"><div class="set-name">Main Set</div><div class="set-detail">4×150 back on 2:30 — strong, even splits, count strokes on middle 50 of each</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy free</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">11</div><div class="day-meta"><div class="day-title">Broken Swims + Pacing</div><div class="day-sub">Wed · ~2,900m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free easy + 4×25 back drill</div></div>
+      <div class="set-line"><div class="set-name">Broken 200 Back</div><div class="set-detail">4×50 back on 3:00 — each 50 is one quarter of a 200<br>Target: even splits at goal race pace<br>Add up splits for projected 200 time</div></div>
+      <div class="set-line"><div class="set-name">Threshold Set</div><div class="set-detail">3×200 back on 3:30 — strong aerobic effort, hold stroke count throughout</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">200 easy free</div></div>
+      <span class="day-total">~2,900m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">12</div><div class="day-meta"><div class="day-title">Back Half Builder</div><div class="day-sub">Fri · ~3,000m · Strong</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 4×25 back build sprints</div></div>
+      <div class="set-line"><div class="set-name">Back Half Set</div><div class="set-detail">6×50 back on 2:00<br>25 easy / 25 MAX SPRINT<br>Count strokes on sprint 25 — hold DPS under fatigue</div></div>
+      <div class="set-line"><div class="set-name">Race Sim</div><div class="set-detail">3×100 back at goal race pace — 5 min rest each<br>Record every 25 split — aim for even or negative splits</div></div>
+      <div class="set-line"><div class="set-name">Underwaters</div><div class="set-detail">6× max underwater push-offs on back</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 easy free</div></div>
+      <span class="day-total">~3,000m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 5 <span class="week-pill">Race Readiness</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">13</div><div class="day-meta"><div class="day-title">Sprint Mechanics + Turns</div><div class="day-sub">Mon · ~2,800m · Strong/Race</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free + 200 back kick + 4×25 back build</div></div>
+      <div class="set-line"><div class="set-name">Turn Specialist Set</div><div class="set-detail">12× turn-only approach — swim from 10m out, count flags, perfect turn, 4+ dolphin kicks, clean breakout<br>Full rest each — this is a skills set, not fitness</div></div>
+      <div class="set-line"><div class="set-name">Sprint 50s</div><div class="set-detail">6×50 back on 2:00 — RACE PACE, perfect turns, nail the flags every rep</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 easy free</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">14</div><div class="day-meta"><div class="day-title">50 & 100 Race Sets</div><div class="day-sub">Wed · ~2,800m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">600 free descend + 4×25 back race-pace efforts</div></div>
+      <div class="set-line"><div class="set-name">50 Back Race Set</div><div class="set-detail">4×50 back on 3:00 — full race effort each rep<br>Record time, note stroke count and underwater distance</div></div>
+      <div class="set-line"><div class="set-name">100 Back Race Set</div><div class="set-detail">3×100 back on 5:00 — race effort<br>Record 25 splits — strokes on lengths 3 & 4 must match lengths 1 & 2</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">500 easy free</div></div>
+      <span class="day-total">~2,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">15</div><div class="day-meta"><div class="day-title">200 Race Simulation</div><div class="day-sub">Fri · ~3,000m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">600 free + 200 back kick + 4×25 pace builders</div></div>
+      <div class="set-line"><div class="set-name">200 Back Simulation</div><div class="set-detail">2×200 back on 8:00 — full race effort<br>Rep 1: even splits — check every 50<br>Rep 2: negative split — back 100 faster than front<br>Record all splits</div></div>
+      <div class="set-line"><div class="set-name">Aerobic Pace Set</div><div class="set-detail">8×50 back on 1:10 — 200 race pace, hold every rep</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 easy free</div></div>
+      <span class="day-total">~3,000m</span>
+    </div>
+  </div>
+
+  <div class="week-label">Week 6 <span class="week-pill">Taper &amp; Time Trials</span></div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">16</div><div class="day-meta"><div class="day-title">Sharpening — Quality Only</div><div class="day-sub">Mon · ~2,200m · Race Pace</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">400 free + 200 back easy drill</div></div>
+      <div class="set-line"><div class="set-name">Speed Work</div><div class="set-detail">8×25 back on 1:30 — MAXIMUM effort, full rest<br>Perfect flags count, perfect turn, perfect breakout</div></div>
+      <div class="set-line"><div class="set-name">Race Pace 50s</div><div class="set-detail">4×50 back on 3:00 — race pace, record each time</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">400 easy free</div></div>
+      <span class="day-total">~2,200m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">17</div><div class="day-meta"><div class="day-title">Final Tune-Up</div><div class="day-sub">Wed · ~1,800m · Light/Race</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">500 free easy</div></div>
+      <div class="set-line"><div class="set-name">Drill Reminders</div><div class="set-detail">4×25 back — one drill per key technique: entry, rotation, kick, flags</div></div>
+      <div class="set-line"><div class="set-name">Race Preview</div><div class="set-detail">6×50 back on 2:30<br>Odd: 25 build / 25 max sprint<br>Even: 50 controlled race pace<br>Feel your stroke at speed — confident and powerful</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">300 easy + full stretch</div></div>
+      <span class="day-total">~1,800m</span>
+    </div>
+  </div>
+  <div class="day-card">
+    <div class="day-head" onclick="toggleDay(this)">
+      <div class="day-num">18</div><div class="day-meta"><div class="day-title">🏆 Time Trial Day</div><div class="day-sub">Fri · ~2,500m · Max Effort</div></div><div class="day-arr">›</div>
+    </div>
+    <div class="day-body">
+      <div class="set-line"><div class="set-name">Warm-Up</div><div class="set-detail">800 free easy + 200 back drill + 4×50 back build to race pace</div></div>
+      <div class="set-line"><div class="set-name">50 Back Time Trial</div><div class="set-detail">1×50 back — MAX EFFORT from a push off<br>Full 10 min rest · Record your time</div></div>
+      <div class="set-line"><div class="set-name">100 Back Time Trial</div><div class="set-detail">1×100 back — MAX EFFORT<br>Full 10 min rest · Record every 25 split</div></div>
+      <div class="set-line"><div class="set-name">Optional: 200 TT</div><div class="set-detail">1×200 back if energy allows — even splits<br>Full 15 min rest before attempting</div></div>
+      <div class="set-line"><div class="set-name">Cool-Down</div><div class="set-detail">500 easy free — celebrate your progress</div></div>
+      <div class="set-note" style="margin-top:8px;font-size:13px;color:#059669;font-weight:600">🎯 Compare to Week 1 baseline. Log in Tracker!</div>
+      <span class="day-total">~2,500m</span>
+    </div>
+  </div>
+</div>
+
+<!-- RACE STRATEGY -->
+<div id="p-race" class="page">
+  <div class="sec-head"><span class="sec-icon">🏁</span><h2>Race Strategy</h2></div>
+  <div class="evtabs">
+    <button class="evb active" onclick="showEv('b50',this)">50 Back</button>
+    <button class="evb" onclick="showEv('b100',this)">100 Back</button>
+    <button class="evb" onclick="showEv('b200',this)">200 Back</button>
+  </div>
+  <div id="b50" class="evc active">
+    <div class="cga"><div class="chip cgo">Sprint · Skill-Dominant</div><h3 class="ct">50 Back — Where Time Is Made & Lost</h3><p class="cp2">The underwater off the start and the one turn are the two biggest time factors in the 50 back. Nail both and the race is largely won.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">Race Model</h3><ul class="cu"><li><strong>0–15m:</strong> Underwater off the block — 5+ dolphin kicks, explode to surface</li><li><strong>15–35m:</strong> Build stroke rate, rotation driving every pull</li><li><strong>35m (flags):</strong> Lock in count — perfect turn</li><li><strong>Final 25:</strong> Max kick, lengthen stroke, no wasted motion</li></ul></div></div>
+    <div class="csa"><div class="chip cg">Quick Time Drops</div><ul class="cu"><li>Add 1 underwater dolphin kick → saves ~0.20 sec</li><li>Consistent flags count = perfect turns every time</li><li>Reduce 2 strokes per length → saves ~0.25 sec</li></ul></div>
+  </div>
+  <div id="b100" class="evc">
+    <div class="cga"><div class="chip cgo">Sprint-Endurance</div><h3 class="ct">100 Back — Rotation Is Your Fuel</h3><p class="cp2">The 100 back is won by swimmers who maintain their rotation in the last 25. When rotation dies, the stroke flattens, drag increases, and times blow up.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">Pacing Model</h3><ul class="cu"><li><strong>First 50:</strong> Strong but not maximal — feel controlled power</li><li><strong>Third 25:</strong> Rotation must stay — don't let the stroke flatten</li><li><strong>Last 25:</strong> Drive the kick, maintain rotation, count flags perfectly</li></ul></div></div>
+  </div>
+  <div id="b200" class="evc">
+    <div class="cga"><div class="chip cgo">Aerobic Event</div><h3 class="ct">200 Back — Even Split Strategy</h3><p class="cp2">The 200 back is the most aerobic sprint in backstroke. Consistent rotation and a locked-in stroke count per lap is the fastest way to swim it.</p></div>
+    <div class="card"><div class="cb"><h3 class="ct">4-Split Model</h3><ul class="cu"><li><strong>1st 50:</strong> Relaxed and long — establish rhythm</li><li><strong>2nd 50:</strong> Lock in stroke count — breathe every 2</li><li><strong>3rd 50:</strong> Build — kick picks up</li><li><strong>4th 50:</strong> Everything you have left</li></ul></div></div>
+  </div>
+  <div class="subsec">Race-Day Checklist</div>
+  <div class="clw"><ul class="checklist">
+    <li><span class="ci">✓</span><div><strong>Flags:</strong> Confirm your stroke count from flags to wall during warm-up.</div></li>
+    <li><span class="ci">✓</span><div><strong>Underwaters:</strong> Practice 2–3 full underwater breakouts in warm-up.</div></li>
+    <li><span class="ci">✓</span><div><strong>On the block:</strong> Deep breath, set feet grip, visualize your entry arc.</div></li>
+    <li><span class="ci">✓</span><div><strong>Rotation cue:</strong> Remind yourself — "rotate toward the pull" on every stroke.</div></li>
+  </ul></div>
+</div>
+
+<!-- MISTAKES -->
+<div id="p-mistakes" class="page">
+  <div class="sec-head"><span class="sec-icon">⚠️</span><h2>Top 10 Mistakes</h2></div>
+  <div class="cda"><div class="chip cr">Mistake 1</div><h3 class="ct">Hips Sitting Low</h3><p class="cp2">Low hips create drag just like in freestyle. The kick must keep hips at the surface. If you look like you're sitting in a chair, your hips are too low.</p><div class="err"><b>Fix</b>Kick-on-back streamline drill — feel hips floating up to surface.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 2</div><h3 class="ct">Crossover Entry</h3><p class="cp2">Arm crossing the body centerline on entry causes S-pattern swimming and kills rotation. Entry must be at the shoulder line, NOT across it.</p><div class="err"><b>Fix</b>Entry drill with focus on pinky-first, shoulder-width entry. Video from overhead.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 3</div><h3 class="ct">Straight-Arm Pull</h3><p class="cp2">A straight-arm pull scoops water sideways instead of backward. The bent-elbow (90°) pull is dramatically more powerful and efficient.</p><div class="err"><b>Fix</b>Fist drill + single-arm drill with focus on elbow bend at depth of pull.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 4</div><h3 class="ct">No Shoulder Rotation</h3><p class="cp2">A flat backstroke is a slow backstroke. Without rotation, you lose reach, pull power, and recovery clearance. Rotate 45–60° per side minimum.</p><div class="err"><b>Fix</b>3-stroke switch drill + single-arm drill.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 5</div><h3 class="ct">Head Popping Up</h3><p class="cp2">Lifting the head to look for the wall creates drag and breaks body position. Trust your flags count — you should never need to look for the wall.</p><div class="err"><b>Fix</b>Flags count practice daily until the count is automatic.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 6</div><h3 class="ct">Flat Entry (Splashing)</h3><p class="cp2">A flat hand entry creates drag and a noisy splash. The pinky-in entry slices through the water cleanly and sets up the catch properly.</p><div class="err"><b>Fix</b>Entry drill — aim for zero splash on every rep.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 7</div><h3 class="ct">Early Pull Exit</h3><p class="cp2">Exiting the pull before the hand pushes past the thigh loses the most powerful phase. Full extension at exit = thumb brushes thigh.</p></div>
+  <div class="cda"><div class="chip cr">Mistake 8</div><h3 class="ct">Knee-Driven Kick</h3><p class="cp2">Same as freestyle — large knee bend creates drag. Hip-initiated flutter kick with floppy ankles is the standard.</p><div class="err"><b>Fix</b>Kick on back with hands on hips, feel the thigh driving each kick beat.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 9</div><h3 class="ct">Ignoring the Turn</h3><p class="cp2">A sloppy backstroke turn with weak underwaters can cost 1–2 full seconds per race. The turn is practiced skill — it doesn't improve without deliberate work.</p><div class="err"><b>Fix</b>Turn-only sets: 10+ turns per session, perfect execution every rep.</div></div>
+  <div class="cda"><div class="chip cr">Mistake 10</div><h3 class="ct">Over-Rotating</h3><p class="cp2">Rotating past 60° causes the stroke to become unbalanced and the kick to lose effectiveness. 45–60° is the sweet spot — any more and you're swimming sideways.</p></div>
+</div>
+
+<!-- TRACKER -->
+<div id="p-tracker" class="page">
+  <div class="sec-head"><span class="sec-icon">📊</span><h2>Progress Tracker</h2></div>
+  <div class="ca" style="margin-bottom:12px"><p class="cp2" style="font-size:13px">Data saves automatically on your device.</p></div>
+  <div class="subsec">Baseline Times (Week 1)</div>
+  <div class="tgrid">
+    <div class="tc"><div class="tl">50 Back — Current</div><input class="ti" id="tb1" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">100 Back — Current</div><input class="ti" id="tb2" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">200 Back — Current</div><input class="ti" id="tb3" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+  </div>
+  <div class="subsec">Goal Times (Week 6)</div>
+  <div class="tgrid">
+    <div class="tc"><div class="tl">50 Back — Goal</div><input class="ti" id="tg1" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">100 Back — Goal</div><input class="ti" id="tg2" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+    <div class="tc"><div class="tl">200 Back — Goal</div><input class="ti" id="tg3" placeholder="0:00.0" type="text" inputmode="decimal" autocomplete="off" autocorrect="off"></div>
+  </div>
+  <div class="subsec">Weekly Log</div>
+  <div class="tscroll"><table class="logt">
+    <thead><tr><th>Week</th><th>Easy /25</th><th>Race /25</th><th>Flags→Wall</th><th>Notes</th></tr></thead>
+    <tbody id="log-body"></tbody>
+  </table></div>
+  <div class="qblock"><div class="qt">Trust Your Flags</div><div class="qb">"The swimmer who knows where the wall is<br>always beats the swimmer who has to look for it."</div></div>
+</div>
+
+</div>
+<div id="bottom-nav">
+  <button class="nav-item active" id="nb-home" onclick="goPage('p-home','nb-home')"><span class="ni">🏠</span><span class="nl">Home</span></button>
+  <button class="nav-item" id="nb-tech" onclick="goPage('p-tech','nb-tech')"><span class="ni">🎯</span><span class="nl">Tech</span></button>
+  <button class="nav-item" id="nb-drills" onclick="goPage('p-drills','nb-drills')"><span class="ni">⚡</span><span class="nl">Drills</span></button>
+  <button class="nav-item" id="nb-work" onclick="goPage('p-workouts','nb-work')"><span class="ni">📋</span><span class="nl">Workouts</span></button>
+  <button class="nav-item" id="nb-race" onclick="goPage('p-race','nb-race')"><span class="ni">🏁</span><span class="nl">Race</span></button>
+  <button class="nav-item" id="nb-track" onclick="goPage('p-tracker','nb-track')"><span class="ni">📊</span><span class="nl">Track</span></button>
+</div>
+</div>
+<script src="./stroke-app.js"></script>
+<script>initApp('bk');</script>
+</body>
+</html>
